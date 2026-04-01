@@ -1,1 +1,3 @@
 outD/
+*.json
+doc_lock/

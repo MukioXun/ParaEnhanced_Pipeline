@@ -43,18 +43,28 @@ Return only valid JSON.
 
     def build_critic_prompt(self, text: str) -> str:
         return f"""
-### AUDIT TASK: {self.dimension_name} NEUTRALITY
-Evaluate if the following text is too explicit or truly ambiguous: "{text}"
+### AUDIT TASK: {self.dimension_name} AMBIGUITY CHECK
+Evaluate if this text is a high-quality "adversarial" prompt: "{text}"
 
-### CRITERIA:
-{self.critic_criteria}
+### GOAL:
+The text should NOT be a bland/boring sentence. It should be a REALISTIC conversational remark that could naturally be spoken in two OPPOSITE ways depending on the voice/intent.
+
+### EVALUATION CRITERIA:
+1. **Plausibility (A vs B):** How naturally does this text fit Branch A? How naturally does it fit Branch B? (Scale 0-5 for each)
+2. **Leakage:** Does the vocabulary explicitly force one interpretation? (e.g., "I'm happy" ruins Emotion; "Yes, sir" might ruin Gender/Age).
+3. **Conversational Value:** Is it too generic (e.g., "It is raining")? We prefer "The forecast just changed for the weekend" (Excited for snow vs. Sad for canceled picnic).
 
 ### OUTPUT FORMAT (JSON):
 {{
-    "score": 0-10,
-    "leakage_point": "string",
-    "suggestion": "string"
+    "score_a": 0-5,
+    "score_b": 0-5,
+    "total_ambiguity_score": 0-10, 
+    "leakage_analysis": "string",
+    "is_too_generic": true/false,
+    "suggestion": "How to make it more evocative yet balanced"
 }}
+
+*Note: A '10' means it is perfectly balanced (5+5) and highly evocative. A '0' means it only makes sense in one context.*
 """
 
 # --- 具体实现 ---

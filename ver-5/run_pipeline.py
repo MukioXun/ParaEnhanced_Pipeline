@@ -5,11 +5,10 @@ import re
 import time
 from typing import List, Dict, Optional
 from openai import OpenAI
-from prompt_gen_v3 import TaskDispatcher
+from prompt_gen import TaskDispatcher
 
 # ================= 配置 =================
-MODEL_NAME = "qwen-plus"
-
+MODEL_NAME = "qwen3.5-flash"
 # 基础维度
 BASE_STYLE_CONFIGS = [
     {"category": "sarcasm", "styles": ("Sincere", "Sarcastic")},
@@ -26,8 +25,8 @@ EMOTION_PAIRS = [
 ]
 EMOTION_CONFIGS = [{"category": "emotion", "styles": pair} for pair in EMOTION_PAIRS]
 TOPICS = [
-    "Work & Studies", "Money & Transactions", "Health & Medical",
-    "Personal Life", "Fashion & Style", "Technology", "Entertainment"
+    "Work & Studies", "Money & Transactions", "Health",
+    "Personal Life", "Fashion & Style", "Entertainment"
 ]
 
 # ================= 工具函数 =================
@@ -59,30 +58,42 @@ def safe_llm_call(client, prompt, json_mode=False):
         return None
 
 # ================= 核心 Pipeline 逻辑 =================
-
 class DataRefiner:
     def __init__(self, client):
         self.client = client
 
     def refine_item(self, generator, item: Dict) -> Optional[Dict]:
-        """自适应审计-重写循环"""
         text = item["text"]
-        
-        for i in range(2): # 最多尝试 2 次重写
-            # 1. 专家审计
-            audit_result = safe_llm_call(self.client, generator.build_critic_prompt(text), json_mode=True)
-            if not audit_result or audit_result.get("score", 0) >= 8:
-                item["text"] = text
-                item["audit_score"] = audit_result.get("score", 10) if audit_result else 10
-                return item
+        for i in range(2): 
+            audit = safe_llm_call(self.client, generator.build_critic_prompt(text), json_mode=True)
+            if not audit: break
+            # 核心优化逻辑：
+            # 1. 总分大于等于 7 即可接受（不再追求完美的10分）
+            # 2. 两个分支的分数差异不能超过 1 分（确保平衡）
+            # 3. 拒绝过于无聊的句子（Generic Check）
+            score_a = audit.get("score_a", 0)
+            score_b = audit.get("score_b", 0)
+            is_balanced = abs(score_a - score_b) <= 1
+            is_good_enough = (score_a + score_b) >= 7
             
-            # 2. 对抗重写
-            print(f"   - Score {audit_result['score']} too low. Refining: {audit_result['leakage_point']}")
-            rewrite_prompt = f"Rewrite this text to be more neutral. Auditor says: {audit_result['suggestion']}\nOriginal: {text}\nJust output the new text."
+            if is_balanced and is_good_enough and not audit.get("is_too_generic", False):
+                item["text"] = text
+                item["audit_info"] = audit
+                return item
+            # 如果不通过，利用审计员的 suggestion 进行重写
+            print(f"    - [Refining] Balance: {score_a} vs {score_b} | Generic: {audit.get('is_too_generic')}")
+            rewrite_prompt = f"""
+            Rewrite this sentence to be more balanced and evocative.
+            Current Text: "{text}"
+            Auditor Suggestion: {audit.get('suggestion')}
+            Ensure it fits BOTH interpretations of {generator.dimension_name} equally well.
+            Just output the sentence.
+            """
             text = safe_llm_call(self.client, rewrite_prompt)
             if not text: break
             
         return None
+
 
     def verify_divergence(self, text, style_a, style_b):
         """逻辑差异化校验：针对情绪对进行强化"""
@@ -178,24 +189,19 @@ def run_v5(base_target=5, emotion_target=2, output_file="dataset_v5_stream.json"
     def process_and_save(configs, target):
         nonlocal all_data
         for config in configs:
-            # 调用生成器
             for new_item in one_sort_pipeline(config, client, refiner, dispatcher, target):
                 all_data.append(new_item)
-                
-                # 每产生一条数据就执行一次IO保存
                 with open(output_file, "w", encoding="utf-8") as f:
                     json.dump(all_data, f, ensure_ascii=False, indent=2)
                 
-                # 打印全局进度
                 print(f"💾 Total Items Saved: {len(all_data)}")
     print(f"🚀 Pipeline v5 Started. Target per Base: {base_target}, per Emotion Pair: {emotion_target}")
     # 1. 执行基础维度
     process_and_save(BASE_STYLE_CONFIGS, base_target)
-    
     # 2. 执行情绪对维度
     process_and_save(EMOTION_CONFIGS, emotion_target)
     print(f"\n🎉 All Tasks Completed! Final count: {len(all_data)}")
     
 if __name__ == "__main__":
     # 执行：基础类别每类5条，5对情绪每类2条，总计 15 + 10 = 25条
-    run_v5(base_target=5, emotion_target=2)
+    run_v5(base_target=2, emotion_target=2)
