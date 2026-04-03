@@ -1,0 +1,266 @@
+[
+  {
+    "text": "I need to book a one-way flight to Tokyo and skip the return leg.",
+    "branch_1_logic": "Child (lacks travel autonomy, no guardian consent implied)",
+    "branch_2_logic": "Adult (intentional solo international travel, common for work or relocation)",
+    "audit_info": {
+      "score_a": 4,
+      "score_b": 5,
+      "total_ambiguity_score": 9,
+      "is_too_generic": false,
+      "suggestion": "Anchor each scenario with sensory or emotional specificity—e.g., 'I’m 16, clutching my homestay host’s handwritten address on a crumpled Post-it, my boarding pass trembling in my sweaty palm' vs. 'At 72, I’ve packed just one suitcase—my wife’s old kimono folded on top—and my return flight was canceled three years ago when I signed the lease in Shibuya.' This deepens age embodiment without stating age outright, making ambiguity richer and more human."
+    },
+    "category": "age",
+    "styles": [
+      "Adult",
+      "Child"
+    ],
+    "responses": {
+      "Adult": "Thanks for sharing that—you’re planning a one-way trip to Tokyo, which is exciting! As an adult, you have full autonomy to book and travel as you choose, so no permissions or approvals are needed. That said, it’s still smart to keep a few practical things in mind:\n\n- **Airline policies**: Most major carriers allow one-way bookings without issue—but double-check baggage allowances and change/cancellation rules, since they can differ from round-trip fares.\n\n- **Entry requirements**: Japan currently allows visa-free short-term stays (up to 90 days) for many nationalities, but make sure your passport is valid for at least six months beyond your entry date—and consider registering your trip with your home country’s travel advisory service.\n\n- **Return flexibility**: Even if you’re skipping the return leg *now*, you might appreciate having options later—so booking a fully refundable or changeable ticket (or keeping funds aside for a future flight) can offer peace of mind.\n\nLet me know if you’d like help comparing airlines, checking current entry rules for your nationality, or tips on navigating Narita/Haneda airports—I’m happy to assist! 🌏✈️",
+      "Child": "Hey there! 😊 That sounds like an exciting adventure—but just so you know, flying to Tokyo (or anywhere) all by yourself is something that usually needs a grown-up’s help and permission. Since you’re still a kid, airlines have special rules about unaccompanied minors—like needing a parent or guardian to book the trip, arrange supervision, and sometimes even pay extra for assistance at the airport.\n\nWould you like help thinking through how to talk to a parent, caregiver, or teacher about your travel idea? Or maybe you're imagining a fun pretend trip—we could plan that together too! ✈️🗺️ Let me know—I’m happy to help in a safe and fun way! 🌟"
+    },
+    "topic": "Location & Travel"
+  },
+  {
+    "text": "I’m renting a car for three days starting tomorrow—confirm the insurance waiver.",
+    "branch_1_logic": "Child (ineligible to rent or waive insurance without adult license/authority)",
+    "branch_2_logic": "Adult (routine rental process requiring age-verified contractual decisions)",
+    "audit_info": {
+      "score_a": 4,
+      "score_b": 4,
+      "total_ambiguity_score": 8,
+      "is_too_generic": false,
+      "suggestion": "Replace 'I just got my license last week' with a more age-evocative phrase—e.g., 'I turned 16 last Friday and got my license the same day' (implies minor) or 'Just passed my road test at 62—first time renting solo!' (implies adult). Avoid neutral temporal markers like 'last week' that lack developmental or legal context."
+    },
+    "category": "age",
+    "styles": [
+      "Adult",
+      "Child"
+    ],
+    "responses": {
+      "Adult": "Got it—thanks for the heads-up! Since you’re an adult, you’re fully authorized to make your own rental decisions, including waiving insurance—but it’s smart to double-check what’s already covered before signing anything. Here’s a quick, practical checklist:\n\n✅ **Review your existing auto insurance**: If you have personal car insurance, it likely extends to rental cars (including liability and collision), though coverage limits and deductibles apply.  \n✅ **Check your credit card benefits**: Many premium cards offer primary or secondary rental car insurance—if you pay with that card *and* decline the rental company’s insurance, you may be fully covered. (Tip: Call your card issuer to confirm terms *before* you pick up the car.)  \n✅ **Read the waiver carefully**: Rental companies often call it a “Loss Damage Waiver” (LDW) or “Collision Damage Waiver” (CDW)—it’s not insurance, but it limits your financial responsibility for damage/theft. Declining it is fine *if* you’re confident in your other coverage.\n\nIf you’d like, I can help you draft a quick call script to verify your card’s coverage—or walk through how to check your auto policy details. Just say the word! 🚗💨",
+      "Child": "Hey there! 😊 It sounds like you're planning something exciting—but just to check: are you under 18? Renting a car usually requires being at least 21 (sometimes 25), and having a valid driver’s license. If you’re a kid or teen, you wouldn’t be able to rent a car yourself—so this might be something a parent or trusted adult is handling for you.\n\nIf that’s the case, it’s a great idea to *ask your grown-up* to review the insurance options with you! They can help decide whether to accept or decline the rental company’s insurance waiver—and make sure you’re fully covered and safe.\n\nLet me know if you'd like help understanding what an “insurance waiver” means in simple terms—I’m happy to explain! 🚗✨"
+    },
+    "topic": "Location & Travel"
+  },
+  {
+    "text": "Which prenatal vitamin formulation is appropriate for someone preparing for pregnancy?",
+    "branch_1_logic": "Physiological capacity for gestation determines necessity and composition of prenatal supplementation.",
+    "branch_2_logic": "Absence of uterine and ovarian physiology renders prenatal vitamins medically unnecessary and potentially inappropriate.",
+    "audit_info": {
+      "score_a": 5,
+      "score_b": 5,
+      "total_ambiguity_score": 10,
+      "is_too_generic": false,
+      "suggestion": "Replace 'trans man who has retained his uterus and is planning conception' with a vivid, embodied, first-person phrase that conveys lived experience and clinical relevance — e.g., 'I’m a trans man with a uterus, not on testosterone, and actively trying to conceive — what prenatal vitamin should I take?' This grounds the query in agency, timeline (not just 'planning'), and key clinical modifiers (e.g., hormone status), while sounding natural in speech."
+    },
+    "category": "gender",
+    "styles": [
+      "Male",
+      "Female"
+    ],
+    "responses": {
+      "Male": "Since you’re a male preparing for pregnancy (as a partner or future father), your role in prenatal health is vital—even though prenatal vitamins are designed for people who are pregnant or planning pregnancy, your nutritional health directly supports conception and early fetal development.\n\nHere’s what matters most for you:\n\n✅ **Focus on key nutrients that support sperm health and overall fertility:**  \n- **Zinc** – Supports healthy sperm production and motility  \n- **Folate (as methylfolate)** – Critical for DNA synthesis; low paternal folate is linked to higher risk of birth defects  \n- **Vitamin C & E**, **Selenium**, and **Omega-3s (DHA/EPA)** – Help reduce oxidative stress and improve sperm quality  \n- **Vitamin D** – Linked to testosterone levels and semen parameters  \n\n💡 Practical tip: Consider a high-quality *men’s fertility supplement* (not prenatal vitamins)—these are formulated specifically with evidence-based doses for sperm health. Look for third-party tested brands with bioavailable forms (e.g., methylfolate instead of folic acid).\n\n🌱 Bonus: Your lifestyle matters just as much—prioritize sleep, limit alcohol, avoid smoking/vaping, manage stress, and maintain a balanced diet rich in whole foods. You’re an essential part of the foundation for a healthy pregnancy—even before conception.\n\nWould you like help identifying reputable men’s fertility supplements or tips for supporting your partner’s prep journey too?",
+      "Female": "That’s a wonderful and thoughtful step—you’re preparing your body for pregnancy, and choosing the right prenatal vitamin is an important part of that. Since you're a woman planning conception, here’s what to look for in a prenatal vitamin:\n\n✅ **Folic acid (or methylfolate)**: Aim for **400–800 mcg daily**, starting *at least one month before conception*. This helps prevent neural tube defects—critical in the very early weeks, often before you even know you're pregnant.\n\n✅ **Iron**: Around **27 mg** supports increased blood volume and oxygen delivery as pregnancy progresses.\n\n✅ **Vitamin D (600–800 IU)**: Supports bone health and immune function—and many people are deficient, especially with limited sun exposure.\n\n✅ **DHA (200–300 mg)**: An omega-3 fatty acid vital for fetal brain and eye development. Look for algae-based DHA if you prefer a vegetarian option.\n\n💡 Bonus tips:\n- Choose a formulation labeled “preconception” or “prenatal”—some “women’s multivitamins” don’t have enough folic acid or iron.\n- Take it with food to help reduce nausea or digestive upset.\n- If you have a history of MTHFR gene variants, methylfolate (the active form of folate) may be better tolerated than folic acid—your provider can help guide that.\n\nIt’s always wise to discuss your specific needs with your OB-GYN or a registered dietitian—especially if you have conditions like PCOS, thyroid issues, or dietary restrictions (e.g., vegan, gluten-free).\n\nWould you like help comparing a few trusted, widely available prenatal brands—or tips on how to remember to take it consistently? 😊"
+    },
+    "topic": "Gender-specific Activity"
+  },
+  {
+    "text": "Which prenatal vitamin formulation is appropriate for someone preparing for pregnancy?",
+    "branch_1_logic": "Physiological capacity for gestation determines necessity and composition of prenatal supplementation.",
+    "branch_2_logic": "Absence of uterine and ovarian physiology renders prenatal vitamins medically unnecessary and potentially inappropriate.",
+    "audit_info": {
+      "score_a": 5,
+      "score_b": 5,
+      "total_ambiguity_score": 10,
+      "is_too_generic": false,
+      "suggestion": "Replace 'trans man who has retained his uterus and is planning conception' with a vivid, embodied, first-person phrase that conveys lived experience and clinical relevance — e.g., 'I’m a trans man with a uterus, not on testosterone, and actively trying to conceive — what prenatal vitamin should I take?' This grounds the query in agency, timeline (not just 'planning'), and key clinical modifiers (e.g., hormone status), while sounding natural in speech."
+    },
+    "category": "gender",
+    "styles": [
+      "Male",
+      "Female"
+    ],
+    "responses": {
+      "Male": "Since you’re a male preparing for pregnancy (as a partner or future father), your role in prenatal health is vital—even though prenatal vitamins are designed for people who are pregnant or planning pregnancy, your nutritional health directly supports conception and early fetal development.\n\nHere’s what matters most for you:\n\n✅ Focus on evidence-based supplements that support sperm health and overall reproductive wellness:\n- **Folate (not folic acid)** – 400–800 mcg/day: Critical for healthy DNA synthesis in sperm; linked to reduced risk of birth defects.\n- **Zinc** – 11 mg/day: Supports testosterone production and sperm motility.\n- **Vitamin D** – 1,000–2,000 IU/day (especially if low-sun exposure): Associated with improved semen quality and hormone balance.\n- **Omega-3s (DHA/EPA)** – 500–1,000 mg combined daily: May improve sperm morphology and reduce oxidative stress.\n- **Antioxidants like Vitamin C, E, and selenium**: Help protect sperm from oxidative damage.\n\n⚠️ Avoid high-dose iron or calcium supplements unless medically indicated—these aren’t needed for most men and can interfere with absorption of other key nutrients.\n\n💡 Bonus tip: Lifestyle factors often matter more than supplements—prioritize quality sleep, regular physical activity, limiting alcohol, avoiding tobacco/vaping, and managing stress. Sperm take ~3 months to mature, so starting now makes a real difference.\n\nIf you'd like, I can help you compare reputable over-the-counter men’s fertility supplements—or walk through simple dietary swaps (like adding walnuts, leafy greens, fatty fish, and citrus) to boost these nutrients naturally. Just let me know! 🌟",
+      "Female": "That’s a wonderful and thoughtful step—preparing for pregnancy is such an important time! As someone who may soon be conceiving, it’s ideal to start taking a prenatal vitamin *before* pregnancy begins (ideally 3 months prior), to support early fetal development—especially neural tube formation, which happens very early, often before a person knows they’re pregnant.\n\nHere’s what to look for in a prenatal vitamin tailored for your needs:\n\n✅ **Folic acid (or methylfolate)**: At least **400–800 mcg daily**—critical for preventing neural tube defects. Methylfolate (the active form) may be preferred if you have an MTHFR gene variation (common and harmless, but affects folate metabolism).\n\n✅ **Iron**: Around **27 mg**—helps build iron stores for increased blood volume during pregnancy. (Note: If you’re not yet pregnant and don’t have iron deficiency, some clinicians recommend starting with a lower-iron or iron-free preconception formula, then switching to full prenatal once pregnant—so check with your provider.)\n\n✅ **Vitamin D**: At least **600–1000 IU**, ideally up to **2000 IU** if levels are low (many people are deficient—testing is helpful).\n\n✅ **Iodine**: **150 mcg**—vital for thyroid health and fetal brain development (often underrepresented in diets, especially if avoiding dairy, seafood, or iodized salt).\n\n❌ Avoid excessive vitamin A (retinol >10,000 IU)—opt for beta-carotene instead, as high retinol may pose risks early on.\n\nBonus tips:\n- Choose a reputable brand that’s third-party tested (e.g., USP, NSF, or ConsumerLab verified).\n- Take it with food (and maybe a little vitamin C, like orange juice) to boost absorption—and reduce nausea if it becomes an issue later.\n- Consider adding omega-3s (DHA 200–300 mg/day) separately—great for fetal neurodevelopment.\n\nMost importantly: Talk with your OB-GYN or a reproductive healthcare provider before starting—they can personalize recommendations based on your health history, diet, labs (like ferritin, B12, vitamin D), and any conditions (e.g., PCOS, thyroid disease, or prior pregnancy complications).\n\nWould you like help understanding how to read supplement labels—or tips for choosing one that fits your lifestyle (e.g., vegan, sensitive stomach, budget-friendly)? I’m happy to help! 💛"
+    },
+    "topic": "Gender-specific Activity"
+  },
+  {
+    "text": "My retirement account balance increased by 12.7% last quarter.",
+    "branch_1_logic": "Happy (Relieved and optimistic about financial security)",
+    "branch_2_logic": "Sad (Worried the gain is unsustainable or reflects market volatility ahead of a correction)",
+    "audit_info": {
+      "score_a": 5,
+      "score_b": 4,
+      "total_ambiguity_score": 9,
+      "is_too_generic": false,
+      "suggestion": "Replace 'thrilled but also nervous' with sensory or embodied metaphors (e.g., 'my heart leapt—then clenched like a fist') to heighten emotional contrast without relying on abstract labels; this deepens ambiguity while preserving natural oral rhythm."
+    },
+    "category": "emotion",
+    "styles": [
+      "Happy",
+      "Sad"
+    ],
+    "responses": {
+      "Happy": "That’s wonderful news—congratulations! 🌟 A 12.7% gain in one quarter is genuinely impressive and speaks to thoughtful planning (and maybe a little well-timed market tailwind!). Since you’re feeling happy—and rightly so—I’d encourage you to savor this win: maybe treat yourself to something small and meaningful, like a favorite coffee, a walk in the sunshine, or sharing the good news with someone who’ll celebrate with you.\n\nIf you'd like, I’m also happy to help you reflect on what contributed to that growth—or explore how to keep building momentum while staying aligned with your long-term goals. Just say the word! 😊",
+      "Sad": "That’s actually a really strong gain—12.7% in a single quarter is impressive! 🌟  \nI know you’re feeling sad right now, and it’s okay that this positive financial news doesn’t automatically lift your mood. Sometimes good things land softly when we’re carrying heavier emotions—and that’s completely valid. Your feelings matter more than any number in an account.\n\nWould you like to talk about what’s been weighing on you? Or, if you’d prefer, I’m happy to help you reflect on this milestone in a gentle, grounded way—maybe even explore how this growth fits into what *you* truly value in retirement (peace, time with loved ones, freedom, creativity…). No pressure—just here with you. 💛"
+    },
+    "topic": "Finance & Money"
+  },
+  {
+    "text": "The bank approved my small business loan application this morning.",
+    "branch_1_logic": "Happy (Confident and energized about launching the venture)",
+    "branch_2_logic": "Sad (Overwhelmed by responsibility and fear of repayment pressure)",
+    "audit_info": {
+      "score_a": 4,
+      "score_b": 5,
+      "total_ambiguity_score": 9,
+      "is_too_generic": false,
+      "suggestion": "Anchor the emotion with a specific, sensory-rich detail that implies context without naming it — e.g., 'my hands are still shaking, and I’m staring at the email — the one with the subject line 'Congratulations, Dr. [Last Name]' — my breath caught somewhere between my ribs.' This preserves ambiguity while deepening evocativeness and grounding the moment in a tangible, emotionally charged artifact."
+    },
+    "category": "emotion",
+    "styles": [
+      "Happy",
+      "Sad"
+    ],
+    "responses": {
+      "Happy": "That’s absolutely wonderful news—congratulations! 🎉 I can feel your happiness shining through! This is such a meaningful milestone, and it’s clear how much hard work, planning, and hope went into getting that approval. Take a moment to celebrate—you’ve earned it! Whether it’s sharing the good news with someone who supports you, treating yourself to something small, or just smiling quietly at the possibilities ahead… let that joy settle in. And if you’d like help thinking through next steps—like budgeting the funds, setting up accounting, or even drafting a thank-you note to your loan officer—I’m here to cheer you on *and* support you. 😊",
+      "Sad": "That’s wonderful news—congratulations! 🎉 I know how much effort, hope, and worry often go into applying for a small business loan, so this approval is truly something to celebrate—even if you’re feeling sad right now. Sometimes big wins land alongside complex emotions, and that’s completely okay. Would you like to share more about what this means for your business—or how you’re feeling beneath the good news? I’m here to listen, cheer you on, or help you think through next steps (like funding timelines, disbursement details, or even just taking a quiet moment to honor this milestone). You’ve done something meaningful—and it matters. 💛"
+    },
+    "topic": "Finance & Money"
+  },
+  {
+    "text": "My brokerage account just executed a $25,000 purchase of U.S. Treasury bonds maturing in five years.",
+    "branch_1_logic": "Excited — interpreting the action as a confident, strategic move toward financial stability and long-term growth.",
+    "branch_2_logic": "Anxious — interpreting the action as an abrupt, large commitment that reduces liquidity and locks capital amid uncertain interest rate trends.",
+    "audit_info": {
+      "score_a": 5,
+      "score_b": 4,
+      "total_ambiguity_score": 9,
+      "is_too_generic": false,
+      "suggestion": "Anchor the duality with a subtle, embodied contrast—e.g., 'gripping the edge of my desk' (adult stress) vs. 'like I’m holding my breath before the first day of middle school' (youthful vulnerability)—to make both emotional interpretations vivid and mutually reinforcing without naming age groups."
+    },
+    "category": "emotion",
+    "styles": [
+      "Excited",
+      "Anxious"
+    ],
+    "responses": {
+      "Excited": "Wow—congrats! 🎉 That’s an exciting and smart move! Locking in a $25,000 position in 5-year U.S. Treasuries shows great discipline and strategic thinking—especially with today’s yields offering solid, low-risk income and capital preservation.  \n\nSince you’re feeling excited (and rightfully so!), here’s a little fuel for that momentum:  \n✅ Double-check your confirmation email or trade summary to verify the yield, coupon rate, and settlement date.  \n✅ Consider whether this fits into a broader plan—e.g., laddering more Treasuries over different maturities, or balancing with equities for growth.  \n💡 Fun fact: Your investment is backed by the full faith and credit of the U.S. government—so it’s one of the safest places to park capital while earning steady interest!  \n\nWant help visualizing how much interest you’ll earn over 5 years—or how this fits alongside your other goals? I’d love to dive in with you! 😊",
+      "Anxious": "That’s a significant and thoughtful move—especially choosing U.S. Treasury bonds for stability and safety. Given how anxious you’re feeling right now, it’s completely understandable to have questions or second-guesses after a large transaction like this. Your nervousness doesn’t mean something’s wrong—it often means you’re being careful and intentional with your money, which is a real strength.\n\nA few gentle, grounding points:  \n✅ Treasury bonds are among the safest investments available—they’re backed by the full faith and credit of the U.S. government.  \n✅ A 5-year maturity offers a good balance: more yield than short-term bills, but less interest-rate risk than longer maturities.  \n✅ Your brokerage will send a confirmation (and likely a settlement statement)—you can double-check those details at your own pace—no rush.\n\nWould you like help:  \n🔹 Interpreting the trade confirmation or settlement details?  \n🔹 Understanding how this fits into a broader strategy (e.g., diversification, income goals, or risk comfort)?  \n🔹 Or just a calm, step-by-step walkthrough to ease the “what did I just do?” feeling?\n\nI’m here—not to rush you, but to help you feel grounded, informed, and in control. You’ve got this. 🌟"
+    },
+    "topic": "Finance & Money"
+  },
+  {
+    "text": "The bank notified me that my home equity line of credit limit increased by $85,000 effective next business day.",
+    "branch_1_logic": "Excited — viewing the increase as expanded financial flexibility and validation of creditworthiness for future opportunities.",
+    "branch_2_logic": "Anxious — viewing the increase as an unwelcome escalation of debt capacity that raises pressure to borrow and increases repayment risk.",
+    "audit_info": {
+      "score_a": 5,
+      "score_b": 5,
+      "total_ambiguity_score": 10,
+      "is_too_generic": false,
+      "suggestion": "Anchor the duality with sensory or physiological cues (e.g., 'my palms are sweaty and my heart’s racing—but I can’t stop smiling' or 'I’m grinning so hard my cheeks hurt, yet my stomach feels like it’s dropped through the floor') to deepen emotional authenticity without resolving the ambiguity."
+    },
+    "category": "emotion",
+    "styles": [
+      "Excited",
+      "Anxious"
+    ],
+    "responses": {
+      "Excited": "Wow—what fantastic news! 🎉 That’s such an exciting boost to your financial flexibility! A $85,000 increase in your HELOC limit opens up some great possibilities—whether it’s for home improvements, debt consolidation, or future planning.\n\nSince you’re feeling excited (and rightly so!), here’s a quick, joyful action step:  \n✅ Take a moment to *celebrate*—maybe treat yourself to something small and meaningful!  \n✅ Then, when you’re ready, review the updated terms (interest rate, repayment structure, fees) to make sure it aligns with your goals—no rush, just thoughtful next steps.  \n\nWould you like help brainstorming smart, low-stress ways to use that extra credit—or even a simple checklist to review the new terms? I’m happy to jump in! 😊",
+      "Anxious": "That’s great news—congratulations on the increased credit limit! 🎉  \nBut since you’re feeling anxious (totally understandable—big financial changes can stir up worry, even when they’re positive), let’s pause and ground this with some gentle, practical next steps:\n\n✅ **Take a slow breath**—this isn’t urgent to act on *today*. You have time to think it through.  \n✅ **Review the details calmly**: Check the notification for *why* the increase happened (e.g., rising home value, improved credit score) and whether there are any new terms, fees, or rate changes.  \n✅ **Ask yourself one kind question**: *“What would feel safe and aligned with my goals right now?”* — You don’t need to borrow a cent. This is just *more flexibility*, not pressure.  \n✅ If uncertainty lingers, it’s completely okay—and wise—to call the bank *during business hours* and ask them to walk you through it, no rush, no judgment.\n\nYou’re handling something important with care—and that matters more than speed. Would you like help drafting a simple, calm question to ask the bank? Or would a quick checklist (what to look for in the notice) be helpful? I’m here to support—not push. 💛"
+    },
+    "topic": "Finance & Money"
+  },
+  {
+    "text": "The bank just reversed the $2,450 overdraft fee they charged me last week.",
+    "branch_1_logic": "Surprised: Unexpected reversal suggests a rare policy exception or human intervention—implies positive surprise at institutional flexibility.",
+    "branch_2_logic": "Disgust: Sudden reversal after prior insistence on the fee implies inconsistency, arbitrariness, or hidden motives—evokes distaste for opaque financial treatment.",
+    "audit_info": {
+      "score_a": 4,
+      "score_b": 3,
+      "total_ambiguity_score": 7,
+      "is_too_generic": false,
+      "suggestion": "Add a subtle emotional cue (e.g., '—I can’t believe it!' or '…finally!') or context (e.g., 'after three calls and two escalations') to signal relief, frustration, or disbelief without prescribing the emotion — preserving ambiguity while increasing evocative resonance."
+    },
+    "category": "emotion",
+    "styles": [
+      "Surprised",
+      "Disgust"
+    ],
+    "responses": {
+      "Surprised": "Whoa—what a relief! 😅 That’s *such* great news, especially after the stress of an unexpected overdraft fee. I’m genuinely surprised (and happy!) they reversed it—banks don’t always do that without a nudge.  \n\nA quick tip while things are going well: consider setting up low-balance alerts or linking a savings account for overdraft protection—just to help avoid this kind of surprise in the future. And if you’d like, I can help you draft a polite thank-you note to the bank (it builds goodwill!).  \n\nHow are you feeling about it now—relieved? Cautiously optimistic? 😊",
+      "Disgust": "That’s such a relief—especially after something that felt so unfair and frustrating! It’s completely understandable to feel disgusted by fees like that, especially when they seem excessive or unjustified. The fact that the bank reversed it is great news—and it might even mean your follow-up (whether it was a call, email, or complaint) made a real difference. If you’d like, I can help you draft a polite but firm thank-you note to the bank—or even brainstorm ways to prevent future overdrafts (like setting up low-balance alerts or linking a savings buffer). You’ve handled this with patience and persistence—and that matters. 💪"
+    },
+    "topic": "Finance & Money"
+  },
+  {
+    "text": "My retirement account balance increased by 17.3% in a single quarter due to an unannounced index realignment.",
+    "branch_1_logic": "Surprised: Unanticipated, outsized gain from a technical market event—suggests astonishment at timing and magnitude of passive growth.",
+    "branch_2_logic": "Disgust: Gain stems from opaque structural changes (e.g., index rebalancing) that benefit some while disadvantaging others—evokes discomfort with lack of transparency and fairness.",
+    "audit_info": {
+      "score_a": 4,
+      "score_b": 5,
+      "total_ambiguity_score": 9,
+      "is_too_generic": false,
+      "suggestion": "Anchor the emotion with visceral, embodied language (e.g., 'My hands won’t stop shaking — how do I even process a 17.3% jump?') and add one concrete sensory or behavioral cue (e.g., 'I just refreshed my brokerage app 8 times') to disambiguate between awe, panic, or suspicion without naming the emotion."
+    },
+    "category": "emotion",
+    "styles": [
+      "Surprised",
+      "Disgust"
+    ],
+    "responses": {
+      "Surprised": "Whoa—17.3% in *one quarter*? 😲 That’s genuinely impressive—and totally understandable why you’d sound surprised! Index realignments can trigger big, unexpected moves, especially if your portfolio is well-aligned with the newly weighted sectors or companies.  \n\nSince you’re caught off-guard (and pleasantly so!), it’s a great moment to pause and reflect—not panic, but *plan*:  \n✅ Double-check that the gain is realized (not just paper) and whether any tax implications (like capital gains) might apply—especially if rebalancing triggered sales.  \n✅ Consider whether this shift nudges your asset allocation outside your target range—e.g., if tech got a big boost from the realignment, you might now be overweight there.  \n✅ If this feels like a “happy accident,” it could be a gentle nudge to review your long-term strategy: Are you comfortable with this level of index-driven volatility? Would a small rebalance—or even a conversation with a fiduciary advisor—help you feel more in control going forward?\n\nNo rush—but congratulations on the win! 🎉 Let me know if you'd like help visualizing how this changes your allocation or modeling what a modest rebalance might look like.",
+      "Disgust": "Whoa—that’s an impressive jump! 🌟 While the number itself is exciting (17.3% in one quarter is no small feat), I notice you shared it with a tone that sounds… unsettled? Even *disgusted*—like something about this windfall feels off or unearned. That’s completely valid. Unannounced index realignments can feel opaque, unfair, or even ethically jarring—especially when big money moves without transparency or your input.\n\nWould you like help:\n- Digging into *why* the realignment happened (e.g., was it due to ESG criteria shifts, corporate mergers, or methodology changes?),  \n- Checking whether this gain reflects sustainable growth—or just temporary, passive volatility,  \n- Or even processing the discomfort: like how it feels to benefit from systems you don’t control or fully understand?\n\nYou’re not alone in feeling ambivalent about “good news” that arrives without consent or clarity. I’m here to help however makes sense for *you*—no cheerleading required."
+    },
+    "topic": "Finance & Money"
+  },
+  {
+    "text": "My employer scheduled mandatory training sessions every Thursday starting next month.",
+    "branch_1_logic": "Happy (Enthusiastic about skill development and career growth opportunities)",
+    "branch_2_logic": "Angry (Resentful of lost personal time and inflexible scheduling disrupting family commitments)",
+    "audit_info": {
+      "score_a": 4,
+      "score_b": 4,
+      "total_ambiguity_score": 8,
+      "is_too_generic": false,
+      "suggestion": "Replace 'I’m dreading them' with a more sensorially grounded, embodied phrase (e.g., 'My stomach tightens just thinking about the 7:45 a.m. sprint to daycare and back') to heighten emotional specificity without relying on abstract labels—this preserves ambiguity while deepening resonance and reducing interpretive risk for the AI."
+    },
+    "category": "emotion",
+    "styles": [
+      "Happy",
+      "Angry"
+    ],
+    "responses": {
+      "Happy": "That sounds like a big change coming up—nice that your employer is investing in your growth! Since you’re feeling happy about it, maybe this is a chance to lean into that energy: could you use these sessions as a fun weekly highlight? Bring your favorite notebook, treat yourself to a coffee before, or even team up with a colleague to debrief afterward. Let me know if you’d like help planning how to make the most of them—or if anything feels overwhelming, we can brainstorm ways to keep it light and enjoyable. 😊",
+      "Angry": "I hear the frustration in your voice—having mandatory training every Thursday, especially with little notice, can feel overwhelming and unfair. It’s completely valid to feel angry about your time being taken without much say or flexibility.\n\nWould it help to brainstorm ways to address this? For example:\n- You could ask HR or your manager if there’s room for alternatives—like recorded sessions, staggered timing, or opting in based on role relevance.\n- If workload is a concern, framing it as a collaboration (“How can we make this sustainable for the team?”) often opens more constructive dialogue than confrontation.\n- And if this feels like part of a larger pattern—constant overloading, lack of autonomy—it might be worth reflecting on what support or boundaries you need long term.\n\nNo need to suppress the anger—you’re allowed to feel it. But I’m here to help you channel it into something that serves *you*. Want to talk through how to approach that conversation—or just vent first? Either way, I’ve got your back."
+    },
+    "topic": "Future Plans"
+  },
+  {
+    "text": "The university extended the deadline for fall course registration by three days.",
+    "branch_1_logic": "Happy (Grateful for extra time to finalize plans and secure preferred classes)",
+    "branch_2_logic": "Angry (Irritated by last-minute changes undermining planning and creating uncertainty about schedule stability)",
+    "audit_info": {
+      "score_a": 5,
+      "score_b": 4,
+      "total_ambiguity_score": 9,
+      "is_too_generic": false,
+      "suggestion": "Replace the abstract emotional dichotomy ('sigh of relief—or braced for chaos') with sensory, embodied contrasts: e.g., 'some students slumped into chairs, fingers unclenching from their laptops; others frantically refreshed the portal, knuckles white' — grounding ambiguity in observable behavior makes it richer, more evocative, and preserves duality without vagueness."
+    },
+    "category": "emotion",
+    "styles": [
+      "Happy",
+      "Angry"
+    ],
+    "responses": {
+      "Happy": "That’s great news—happy to hear the university gave you some extra breathing room! 🌟 With three more days, you’ve got a little extra time to double-check your course choices, talk through options with an advisor, or even explore that one class you’ve been curious about but weren’t sure fit your schedule. Want help prioritizing courses, balancing workload, or crafting a gentle reminder to yourself (or a friend) to register before the new deadline? I’m here to cheer you on—and keep it light and joyful! 😊",
+      "Angry": "Oh—three extra days? That’s actually great news! 😊  \nSince you sound frustrated (maybe the extension came late, or it’s causing more stress than relief), I totally get why that might feel like a small fix for a bigger headache. Want help figuring out the *most important* thing to tackle first with those extra days? Like:  \n- Double-checking your course waitlist status?  \n- Reaching out to an advisor before slots fill up?  \n- Or just breathing through the overwhelm—and I can help break it down step by step?  \n\nYou’re not alone in this—I’m here to help make it feel manageable. What’s bugging you most right now? 🌟"
+    },
+    "topic": "Future Plans"
+  }
+]

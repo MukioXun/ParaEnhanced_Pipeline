@@ -1,0 +1,434 @@
+[
+  {
+    "text": "Your dedication to staying up all night is truly inspiring.",
+    "branch_1_logic": "Sincere admiration for strong work ethic and commitment to deadlines.",
+    "branch_2_logic": "Sarcastic criticism for poor time management and unhealthy habits.",
+    "audit_info": {
+      "score_a": 5,
+      "score_b": 5,
+      "total_ambiguity_score": 10,
+      "leakage_analysis": "The vocabulary uses strong positive adjectives ('dedication', 'inspiring') which creates the necessary tension for sarcasm. There is no lexical leakage forcing sincerity; the positivity of the words relies entirely on prosody or context to determine if they are genuine praise or ironic criticism.",
+      "is_too_generic": false,
+      "suggestion": "This is an optimal baseline. To maintain balance, ensure the surrounding conversation does not specify the activity (e.g., 'coding' vs 'gaming'), as that would bias the interpretation before the sentence is even read."
+    },
+    "category": "sarcasm",
+    "styles": [
+      "Sincere",
+      "Sarcastic"
+    ],
+    "responses": {
+      "style_a": "That’s really kind of you to say. I’m genuinely glad I can be here for you whenever you need, no matter the hour. It means a lot to know I can support you through your late-night efforts. Please remember to take care of yourself, too. What else can I help you with?",
+      "style_b": "Haha, I'll take that as high praise! 😄 Though honestly, \"inspiring\" might be generous when I'm just running on code instead of coffee. But hey, I'm always here whenever you need. Just make sure you're taking care of yourself too—don't let me keep you up too late!"
+    },
+    "topic": "Work & Studies",
+    "timestamp": "2026-04-01 20:26:14"
+  },
+  {
+    "text": "I am so impressed by the effort you put into this assignment.",
+    "branch_1_logic": "Genuine recognition of visible hard work and thorough research.",
+    "branch_2_logic": "Mockery suggesting the work was superficial or done at the last minute.",
+    "audit_info": {
+      "score_a": 5,
+      "score_b": 4,
+      "total_ambiguity_score": 9,
+      "leakage_analysis": "Vocabulary is neutral-to-positive ('impressed', 'effort') without forcing a specific emotion. No gendered terms or explicit outcome indicators. The intensity word 'so' adds weight that can be flipped via prosody for sarcasm.",
+      "is_too_generic": false,
+      "suggestion": "To increase evocativeness while maintaining balance, introduce a subtle contextual anchor that raises the stakes (e.g., '...considering how little time you had'). This preserves ambiguity while making the scenario feel more lived-in and less like a stock phrase."
+    },
+    "category": "sarcasm",
+    "styles": [
+      "Sincere",
+      "Sarcastic"
+    ],
+    "responses": {
+      "style_a": "That truly means a lot to hear, thank you. I really wanted to make sure this was thorough and actually useful for you, so knowing it resonated is wonderful. I'm happy to keep refining anything until it feels just right—please don't hesitate to reach out if you need anything else.",
+      "style_b": "I can hear the hesitation, and I appreciate the honesty over empty praise. If this didn’t quite meet your expectations, I’d much rather know the truth than assume it was good enough. Where do you think it needs the most work?"
+    },
+    "topic": "Work & Studies",
+    "timestamp": "2026-04-01 20:27:22"
+  },
+  {
+    "text": "We genuinely appreciate the audacious approach you took during the crisis response.",
+    "branch_1_logic": "Positive feedback on innovative thinking and creative solutions.",
+    "branch_2_logic": "Subtle complaint that the methods are overly complicated or inefficient.",
+    "audit_info": {
+      "score_a": 4,
+      "score_b": 4,
+      "total_ambiguity_score": 8,
+      "leakage_analysis": "The word 'genuinely' acts as a mild anchor toward sincerity (Branch A), making pure sarcasm require stronger contextual cues to feel natural. However, 'audacious' is a high-value pivot word that strongly supports both 'brave innovation' and 'reckless negligence', maintaining strong ambiguity.",
+      "is_too_generic": false,
+      "suggestion": "Remove the word 'genuinely' to eliminate the sincerity bias. Example: 'We appreciate the audacious approach you took during the crisis response.' This allows the verb 'appreciate' to float equally between genuine gratitude and passive-aggressive acknowledgment of risk."
+    },
+    "category": "sarcasm",
+    "styles": [
+      "Sincere",
+      "Sarcastic"
+    ],
+    "responses": {
+      "style_a": "Thank you for sharing that with me. It truly means a lot to hear that the approach resonated with you, especially considering the pressure involved. We’re genuinely glad we could help bring stability during such a critical moment. Your trust is incredibly valuable, and I’m committed to supporting you with the same dedication moving forward. Please don’t hesitate to reach out if you need anything else.",
+      "style_b": "I hear you. It sounds like the gamble didn't pay off, and the result was more frustrating than reassuring. I'm not going to spin this or defend the choice; boldness without results can feel like negligence. I want to focus entirely on damage control and getting us back on track. What's the single biggest thing you need me to help you solve right now?"
+    },
+    "topic": "Work & Studies",
+    "timestamp": "2026-04-01 20:30:02"
+  },
+  {
+    "text": "The new interface is incredibly intuitive.",
+    "branch_1_logic": "Genuine appreciation for user-friendly design improvements.",
+    "branch_2_logic": "Sarcastic comment on confusing navigation and hidden menus.",
+    "audit_info": {
+      "score_a": 5,
+      "score_b": 5,
+      "total_ambiguity_score": 9,
+      "leakage_analysis": "No lexical leakage. The adjective 'intuitive' is inherently positive, serving as the perfect pivot for tone-based inversion. 'Incredibly' adds emphasis that works equally well for genuine enthusiasm or biting irony.",
+      "is_too_generic": false,
+      "suggestion": "To increase evocativeness without breaking balance, add a conversational marker or situational context that raises emotional stakes (e.g., 'Honestly, the new interface is incredibly intuitive'). This grounds it in speech while maintaining the dual interpretation."
+    },
+    "category": "sarcasm",
+    "styles": [
+      "Sincere",
+      "Sarcastic"
+    ],
+    "responses": {
+      "style_a": "That really means a lot to hear, thank you. We put a lot of thought into making sure everything felt natural and straightforward, so knowing it works well for you is genuinely rewarding. \n\nIf you notice anything else while using it—or even just something you're loving—I'd love to keep the conversation going.",
+      "style_b": "I hear you—and I definitely catch the irony there. Sounds like the new interface is creating more roadblocks than shortcuts. \n\nI'm sorry it's been frustrating; we want the tools to make life easier, not harder. What's the specific feature giving you trouble right now? I can help you navigate around it, or I can pass the feedback directly to the design team."
+    },
+    "topic": "Technology",
+    "timestamp": "2026-04-01 20:32:02"
+  },
+  {
+    "text": "The data encryption is completely flawless.",
+    "branch_1_logic": "Confirmation of successful security audit results.",
+    "branch_2_logic": "Irony regarding a recent publicized breach vulnerability.",
+    "audit_info": {
+      "score_a": 4,
+      "score_b": 5,
+      "total_ambiguity_score": 9,
+      "leakage_analysis": "No explicit emotional or demographic leakage. The word 'flawless' is a strong positive adjective that works for sincere praise (hyperbolic) or sarcastic criticism (highlighting failure), but leans slightly towards sarcasm due to the absolute nature of the claim.",
+      "is_too_generic": false,
+      "suggestion": "To increase conversational value and reduce the 'report-like' tone, try making it more idiomatic. Example: 'Guess we're unhackable now.' This retains the ambiguity while sounding more like natural speech."
+    },
+    "category": "sarcasm",
+    "styles": [
+      "Sincere",
+      "Sarcastic"
+    ],
+    "responses": {
+      "style_a": "I truly appreciate you sharing that. It’s reassuring to know that you feel confident in the security of your data. Trust is essential when it comes to encryption, and hearing that it’s working effectively for you means a lot. If you ever have questions about how it protects you or need help with anything else, I’m here to offer straightforward, honest support.",
+      "style_b": "I'll take that as a sign that things aren't going as planned. I understand the frustration—security hiccups are no joke. Let's get to the bottom of it. What specific errors are you encountering?"
+    },
+    "topic": "Technology",
+    "timestamp": "2026-04-01 20:35:01"
+  },
+  {
+    "text": "Maybe it's time we stopped shielding ourselves from the stories meant for who we've become.",
+    "branch_1_logic": "Adult (managing household content restrictions)",
+    "branch_2_logic": "Child (circumventing parental controls)",
+    "audit_info": {
+      "score_a": 4,
+      "score_b": 5,
+      "total_ambiguity_score": 9,
+      "leakage_analysis": "Low explicit leakage. Vocabulary is abstract ('stories', 'shielding') rather than generational slang. However, the phrase 'who we've become' implies a significant life journey, slightly favoring an older or more mature speaker over a child/early teen.",
+      "is_too_generic": false,
+      "suggestion": "To improve balance for Branch A (Younger Speaker), add a colloquial marker or simplify the phrasing (e.g., 'Maybe we should stop hiding from the stuff that defines us now'). This grounds it in casual speech while maintaining the philosophical core."
+    },
+    "category": "age",
+    "styles": [
+      "Adult",
+      "Child"
+    ],
+    "responses": {
+      "style_a": "There’s a quiet power in that admission. It takes a certain kind of courage to set down the armor we’ve worn just to get by. Often, the stories we try to avoid are the ones holding the map to where we’re actually going next.\n\nIf you’re ready to look at those pages without flinching, I’m here to walk through them with you—not as a guide telling you what to see, but as a witness to what you find. Does one particular chapter feel heavier than the others right now?",
+      "style_b": "Wow, that is such a wise thing to share. It takes a lot of courage to open yourself up to stories that match the person you are becoming. \n\nSometimes we hide from those stories because they feel big or a little scary, but it sounds like you’re realizing you’ve grown strong enough to hold them. Think of it like putting on a new pair of shoes—they fit differently once your feet have grown. \n\nAre you feeling excited about it, or maybe a little nervous? There’s no rush, and I’m here to listen whenever you want to talk more about what those stories might mean."
+    },
+    "topic": "Entertainment",
+    "timestamp": "2026-04-01 20:41:59"
+  },
+  {
+    "text": "Are we prepared to finalize this approval before the window of opportunity closes?",
+    "branch_1_logic": "Adult authorizing a subscription renewal.",
+    "branch_2_logic": "Child soliciting consent for an app download.",
+    "audit_info": {
+      "score_a": 4,
+      "score_b": 4,
+      "total_ambiguity_score": 8,
+      "leakage_analysis": "Vocabulary ('finalization', 'approval', 'window of opportunity') strongly anchors the speaker in a professional corporate context. This limits age ambiguity to working-age adults and lacks the emotional texture required for distinct vocal interpretations beyond urgency vs. caution.",
+      "is_too_generic": false,
+      "suggestion": "Replace corporate jargon with natural speech patterns to increase conversational realism. Example: 'Do you think we're ready to sign off before things get tight?' allows for more varied vocal inflections (anxious vs. calm) without sounding like an email draft."
+    },
+    "category": "age",
+    "styles": [
+      "Adult",
+      "Child"
+    ],
+    "responses": {
+      "style_a": "I understand the urgency. We need to be decisive to ensure we don't miss this opportunity. From my assessment, we appear ready to finalize this. Shall I prepare the final documentation for your immediate review so we can lock it in before the window closes?",
+      "style_b": "I can hear how serious this is for you! 🕰️ Sometimes big deadlines can feel a little scary, but remember—we can handle this together. \n\nTake a deep breath with me... okay! Now, let’s look at what’s left to do. Are there just a couple of small steps before we’re ready? I’m right here to help you cross them off, one by one. You’re doing great! ✨"
+    },
+    "topic": "Personal Life",
+    "timestamp": "2026-04-01 20:56:11"
+  },
+  {
+    "text": "I've hit a temporary wall with this feature.",
+    "branch_1_logic": "Adult reporting a technical limitation or access denial.",
+    "branch_2_logic": "Child identifying an age-gate and requesting an override.",
+    "audit_info": {
+      "score_a": 4,
+      "score_b": 5,
+      "total_ambiguity_score": 9,
+      "leakage_analysis": "The word 'temporary' subtly biases the text toward Branch B (Constructive/Neutral), implying a solvable problem. For Branch A (Frustrated/Negative), this softens the impact slightly compared to rawer phrasing like 'I'm stuck'. However, it remains highly age-neutral and lacks explicit gender markers.",
+      "is_too_generic": false,
+      "suggestion": "Remove 'temporary' to increase rawness for Branch A (e.g., 'I've hit a wall with this feature'), or add context like 'again' to emphasize persistence for Branch B."
+    },
+    "category": "age",
+    "styles": [
+      "Adult",
+      "Child"
+    ],
+    "responses": {
+      "style_a": "I understand—that can be frustrating when you're in the middle of working on it. It's completely normal to hit these temporary walls, though. \n\nI'm here to help you clear the path. Could you walk me through what you were expecting versus what's happening? Once we pinpoint it, we'll find a way forward efficiently.",
+      "style_b": "Oh wow, that sounds really frustrating! 😟 But hey, remember how you said it’s *temporary*? That’s huge! It just means we’re almost there, and this is actually a sign that you’re learning something new.\n\nSometimes when we get stuck, it’s like trying to fit a puzzle piece in too fast. Maybe we should take a tiny break, grab a drink, or look at it from a different angle together? I’m right here with you, and I know you’ve got this! 💪✨"
+    },
+    "topic": "Technology",
+    "timestamp": "2026-04-01 21:07:02"
+  },
+  {
+    "text": "Given the expanded scope, I propose extending the deadline to ensure the final deliverable reflects the depth it truly warrants.",
+    "branch_1_logic": "Professional negotiating contract milestone with client approval.",
+    "branch_2_logic": "Learner seeking exemption from automated cutoffs without supervision.",
+    "audit_info": {
+      "score_a": 5,
+      "score_b": 4,
+      "total_ambiguity_score": 9,
+      "leakage_analysis": "Vocabulary is strictly corporate ('deliverable', 'scope', 'warrants'). No slang, cultural references, or generational markers (e.g., tech terms, nostalgia) that would leak age. Gender is neutral. The text relies entirely on prosody to distinguish between sincere professionalism and passive-aggressive resistance.",
+      "is_too_generic": false,
+      "suggestion": "While the balance is excellent, the tone is slightly robotic. To increase evocativeness without leaking demographics, add a clause hinting at personal cost or emotional investment (e.g., '...even if it means sacrificing our weekend'). This allows for a stronger contrast between 'dedicated' vs. 'resentful' delivery while maintaining age neutrality."
+    },
+    "category": "age",
+    "styles": [
+      "Adult",
+      "Child"
+    ],
+    "responses": {
+      "style_a": "That makes complete sense. When the scope expands, ensuring there's enough time for thorough execution is crucial for maintaining quality. I fully support adjusting the timeline to reflect that.\n\nPlease let me know what new deadline you have in mind, and we can finalize it immediately so you can focus on delivering the best possible outcome.",
+      "style_b": "That sounds like a thoughtful plan! 😊 When we add more things to do, sometimes we need a little more time to make it perfect. It is completely okay to ask for an extension so you can do your best work. I would be happy to help you get that deadline changed. You are doing a great job!"
+    },
+    "topic": "Work & Studies",
+    "timestamp": "2026-04-01 21:16:52"
+  },
+  {
+    "text": "I want to make sure I'm authorized to enter.",
+    "branch_1_logic": "Adult checking access permissions for a facility or event.",
+    "branch_2_logic": "Minor requesting permission to attend a restricted gathering.",
+    "audit_info": {
+      "score_a": 4,
+      "score_b": 3,
+      "total_ambiguity_score": 7,
+      "leakage_analysis": "The vocabulary 'authorized' and 'enter' is formal/technical. This creates a slight leakage towards adult or professional contexts, reducing age ambiguity (less likely to be a child). However, it does not explicitly force gender or specific emotion.",
+      "is_too_generic": false,
+      "suggestion": "To improve conversational value and age neutrality, simplify the phrasing. Example: 'Just checking if I'm allowed in here?' allows for both a nervous teen and an assertive adult to sound natural."
+    },
+    "category": "age",
+    "styles": [
+      "Adult",
+      "Child"
+    ],
+    "responses": {
+      "style_a": "That's a smart call. It's always better to be sure about access rights before trying to enter. I can help you check that right now. Just let me have your ID or access code, and I'll verify your authorization status immediately.",
+      "style_b": "That is such a smart thing to check! It’s really important to feel safe and sure. Don’t worry, I’m right here to help you. Can you tell me a little bit about where you want to go? Maybe we can find the right key or ask someone nice together! 🌟"
+    },
+    "topic": "Personal Life",
+    "timestamp": "2026-04-01 21:35:18"
+  },
+  {
+    "text": "How vital is this security layer to protecting what matters most?",
+    "branch_1_logic": "Interprets 'critical' through technical metrics: system uptime, breach probability, and financial impact on infrastructure.",
+    "branch_2_logic": "Interprets 'critical' through personal impact: data privacy exposure, identity theft risks, and psychological safety of the user.",
+    "audit_info": {
+      "score_a": 5,
+      "score_b": 4,
+      "total_ambiguity_score": 9,
+      "leakage_analysis": "The text is highly gender-neutral with no pronouns or gendered slang. Regarding intent, it allows for Branch A (Skeptical/Concerned: questioning efficacy) and Branch B (Supportive/Rhetorical: emphasizing necessity). Vocabulary like 'vital' and 'protecting' carries emotional weight without forcing a specific stance.",
+      "is_too_generic": false,
+      "suggestion": "To increase conversational realism while maintaining balance, anchor the abstract 'what matters most' to a concrete stakeholder (e.g., 'our customers' or 'the team'). This grounds the stakes without narrowing the interpretive range."
+    },
+    "category": "gender",
+    "styles": [
+      "Male",
+      "Female"
+    ],
+    "responses": {
+      "style_a": "It’s absolutely critical. When you’re protecting what matters most—your data, your assets, your privacy—that security layer is your primary shield. Without it, you leave significant gaps that could compromise everything downstream.\n\nYou’re right to focus on this foundation. It’s the difference between confidence and vulnerability. Let’s make sure it’s configured tightly so you don’t have to worry about it later.",
+      "style_b": "That is such an important question, and I really appreciate you bringing it up. I know how much is at stake when we talk about protecting what truly matters to us.\n\nThis security layer is absolutely vital. Think of it less like a technical setting and more like a dedicated guardian for your peace of mind. It acts as your primary shield against threats that could compromise your privacy, your data, or even your sense of safety online.\n\nYou are right to prioritize this—taking these steps shows you care deeply about your well-being. Please know that we’re here to support you in keeping everything secure, so you never have to navigate those worries alone. Does that help clarify things for you?"
+    },
+    "topic": "Technology",
+    "timestamp": "2026-04-01 21:47:29"
+  },
+  {
+    "text": "Who truly holds the key to the main drive?",
+    "branch_1_logic": "Prioritizes administrative hierarchy: permission levels, role-based access control, and network authentication protocols.",
+    "branch_2_logic": "Prioritizes relational trust: physical proximity, known associates, and potential for unauthorized monitoring or social engineering.",
+    "audit_info": {
+      "score_a": 4,
+      "score_b": 3,
+      "total_ambiguity_score": 7,
+      "leakage_analysis": "No explicit gendered pronouns or titles. However, the word 'truly' adds a layer of intensity that leans slightly toward serious/authoritative contexts (Branch A), potentially making Branch B (casual inquiry) feel less natural.",
+      "is_too_generic": false,
+      "suggestion": "To improve realism and balance, remove the dramatic emphasis ('truly') and technical specificity ('main'). Try: 'Who actually controls the drive?' This sounds more like casual speech while retaining the ambiguity between an interrogative threat and a genuine question."
+    },
+    "category": "gender",
+    "styles": [
+      "Male",
+      "Female"
+    ],
+    "responses": {
+      "style_a": "That depends on the setup. Whether it's hardware, software, or security protocols, the \"key\" holder isn't always who you'd expect. \n\nGive me the context—what system or scenario we're dealing with—and I'll help you verify who actually has the access.",
+      "style_b": "That sounds like a pivotal question, and I want to make sure you feel heard. Understanding who holds the key to the main drive is crucial, especially if there are concerns about access or safety. I don’t have visibility into your specific environment, but I’m here to help you navigate this. Are we talking about a technical system, a team dynamic, or perhaps a scenario you’re writing? Whatever it is, we can work through it together."
+    },
+    "topic": "Technology",
+    "timestamp": "2026-04-01 21:53:45"
+  },
+  {
+    "text": "My doctor mentioned updating my preventive screening schedule.",
+    "branch_1_logic": "Branch 1 (Male): Prioritize lipid profile analysis, blood pressure monitoring, and age-specific cancer screenings based on male prevalence statistics.",
+    "branch_2_logic": "Branch 2 (Female): Prioritize bone density assessment, reproductive health checks, and adjusted cardiovascular risk timelines based on female prevalence statistics.",
+    "audit_info": {
+      "score_a": 4,
+      "score_b": 4,
+      "total_ambiguity_score": 8,
+      "leakage_analysis": "No gender markers present (no pronouns or gendered nouns). Vocabulary is neutral regarding age and identity. However, 'preventive screening' implies adulthood, which slightly narrows the demographic but does not force a specific gender interpretation.",
+      "is_too_generic": false,
+      "suggestion": "The text is clinically precise but lacks conversational warmth. To increase evocativeness while maintaining neutrality, simplify the jargon: 'My doctor said I need to update my checkup schedule.' This sounds more like natural speech while keeping the emotional intent ambiguous."
+    },
+    "category": "gender",
+    "styles": [
+      "Male",
+      "Female"
+    ],
+    "responses": {
+      "style_a": "That's a solid step to take—keeping up with preventive screenings is one of the best ways to protect your long-term health. \n\nDid the doctor specify which tests were changing, or is it a full review of your timeline? If you’re feeling unsure about the new requirements, I can help you list out questions to bring to the next appointment so you don’t miss anything important. Just let me know what you need.",
+      "style_b": "That sounds like a really positive move toward taking charge of your wellness. I know that sometimes reviewing or updating a screening schedule can bring up a lot of questions—or even a little bit of anxiety—and that’s completely understandable.\n\nHow are you feeling about the update overall? If you want, we can walk through what those screenings typically entail so you feel fully informed going in. Just let me know what would make you feel most supported right now. And of course, always lean on your healthcare team for the specific medical guidance!"
+    },
+    "topic": "Health & Medical",
+    "timestamp": "2026-04-01 22:04:59"
+  },
+  {
+    "text": "I tried on the wedding dress this afternoon.",
+    "branch_1_logic": "It fit perfectly, confirming excitement and relief about the choice.",
+    "branch_2_logic": "It did not fit well, raising doubts about the relationship or decision.",
+    "audit_info": {
+      "score_a": 5,
+      "score_b": 5,
+      "total_ambiguity_score": 10,
+      "leakage_analysis": "Minimal emotional leakage. While 'wedding' carries a cultural positive bias, the verb phrase 'tried on' introduces outcome uncertainty (fit, comfort, decision). No explicit emotion adjectives are present to force a specific valence.",
+      "is_too_generic": false,
+      "suggestion": "To maximize vocal dependency, consider adding a neutral sensory detail like 'in front of the mirror.' This grounds the physical scene without implying success or failure, ensuring the listener relies entirely on tone to determine if the speaker felt beautiful or rejected."
+    },
+    "category": "emotion",
+    "styles": [
+      "Happy",
+      "Sad"
+    ],
+    "responses": {
+      "style_a": "Oh, that’s absolutely wonderful! 🎉 I bet you felt so special seeing yourself in it. How did it feel wearing it? I’m so happy for you!",
+      "style_b": "I'm really sorry to hear that it wasn't a joyful moment for you. Trying on a dress like that can stir up so many complex feelings—whether it's disappointment, doubt, or something else entirely. There's no pressure to explain right away, but I'm here to listen whenever you're ready to talk about how you're feeling."
+    },
+    "topic": "Fashion & Style",
+    "timestamp": "2026-04-01 22:11:44"
+  },
+  {
+    "text": "I ended up selling my old leather boots yesterday.",
+    "branch_1_logic": "Needed the extra cash and felt relieved to declutter the closet.",
+    "branch_2_logic": "Regretted letting go of a sentimental pair that held memories.",
+    "audit_info": {
+      "score_a": 5,
+      "score_b": 4,
+      "total_ambiguity_score": 9,
+      "leakage_analysis": "Minimal lexical leakage. 'Old' slightly biases toward relief (discarding used goods), but 'ended up' implies a process or lack of immediate control, allowing for reluctant sale interpretations. No explicit emotion markers present.",
+      "is_too_generic": false,
+      "suggestion": "Introduce a descriptor of value that applies to both contexts to raise emotional stakes without forcing an interpretation. Example: 'I ended up selling my trusted old leather boots yesterday.' ('Trusted' implies reliance, making loss more poignant while still allowing for upgrade relief)."
+    },
+    "category": "emotion",
+    "styles": [
+      "Happy",
+      "Sad"
+    ],
+    "responses": {
+      "style_a": "That's fantastic! 😊 There's nothing quite like the satisfaction of clearing out old stuff and making some extra cash at the same time. Did you manage to find a new home for them easily, or was it a quick sale?",
+      "style_b": "It sounds like you’re feeling a bit of a loss, and I want you to know that’s completely understandable. Old leather boots often carry a lot of history—every scuff and crease tells a story of where you’ve been and what you’ve done. Parting with them can feel heavier than just selling an item because you’re letting go of those memories, too.\n\nTake your time with the feeling; it’s okay to be wistful. I’m here if you want to talk about what they meant to you, or if you’d prefer to chat about something else to take your mind off things for a while."
+    },
+    "topic": "Fashion & Style",
+    "timestamp": "2026-04-01 22:13:02"
+  },
+  {
+    "text": "The clinic just confirmed my surgery is scheduled for next Tuesday.",
+    "branch_1_logic": "Excited: The uncertainty is over, a concrete plan is in place, and the path to recovery has officially begun.",
+    "branch_2_logic": "Anxious: The countdown has started, bringing immediate pressure and fear regarding the upcoming procedure.",
+    "audit_info": {
+      "score_a": 5,
+      "score_b": 5,
+      "total_ambiguity_score": 10,
+      "leakage_analysis": "The vocabulary is strictly factual ('clinic', 'confirmed', 'scheduled'). There are no emotive adjectives (e.g., 'finally', 'unfortunately') or qualifiers that bias the sentiment. The word 'surgery' is contextually neutral enough to support both relief (ending pain/waiting) and dread (fear of procedure/recovery).",
+      "is_too_generic": false,
+      "suggestion": "This text is already near-optimal for adversarial emotion testing. To further heighten evocativeness without breaking neutrality, consider adding a logistical consequence that impacts both emotions equally, such as: 'The clinic just confirmed my surgery is scheduled for next Tuesday, so I need to clear my work schedule.' This adds stakes (time off) that can be voiced as a burden or a necessary break."
+    },
+    "category": "emotion",
+    "styles": [
+      "Excited",
+      "Anxious"
+    ],
+    "responses": {
+      "style_a": "Wow, that’s fantastic news! 🎉 I’m so glad to hear you’re feeling excited—that’s such a powerful mindset to have. It sounds like you’re really looking forward to this next chapter; it’s a big step forward. How are you feeling about the prep work? I’m here to help if you need any checklists, reminders, or just someone to talk to before next Tuesday!",
+      "style_b": "I can hear how much this is weighing on you. It’s completely normal to feel anxious when the date is finally set—it makes everything feel very real. \n\nPlease take a moment to breathe; you don’t have to figure everything out right now. I’m here if you want to vent about your worries, or we can focus on getting you ready in whatever way feels best. You’re not alone in this."
+    },
+    "topic": "Health & Medical",
+    "timestamp": "2026-04-01 22:14:30"
+  },
+  {
+    "text": "They moved up my consultation to tomorrow morning.",
+    "branch_1_logic": "Excited: Getting answers faster than anticipated shows priority and eagerness to resolve the health concern.",
+    "branch_2_logic": "Anxious: The sudden change creates urgency and reduces the time available to mentally prepare for difficult news.",
+    "audit_info": {
+      "score_a": 5,
+      "score_b": 5,
+      "total_ambiguity_score": 10,
+      "leakage_analysis": "The vocabulary is entirely neutral. 'Moved up' indicates a time change without valence (good/bad). 'Consultation' implies stakes but not emotional outcome. No adjectives or adverbs force a specific sentiment.",
+      "is_too_generic": false,
+      "suggestion": "The text is already highly effective. To maximize prosodic testing, consider adding a trailing ellipsis (...) to invite intonation variance, or record it with varying pause lengths before 'tomorrow morning' to test stress detection."
+    },
+    "category": "emotion",
+    "styles": [
+      "Excited",
+      "Anxious"
+    ],
+    "responses": {
+      "style_a": "Wow, that’s fantastic news! 🎉 It sounds like you’re really looking forward to this—it’s such a relief to get the ball rolling sooner rather than later. I love your energy!\n\nSince it’s tomorrow morning, do you want a quick checklist to help you prep without worrying about forgetting anything? Either way, I’m cheering you on!",
+      "style_b": "That sounds really stressful, especially with such short notice. It’s completely understandable to feel a bit overwhelmed when plans shift unexpectedly.\n\nTake a deep breath—you’ve got this. Since tomorrow is coming up quickly, would it help if we went over some key points or questions you want to bring up during the consultation? Or do you just need someone to listen while you sort through your thoughts? I’m here to help however works best for you."
+    },
+    "topic": "Health & Medical",
+    "timestamp": "2026-04-01 22:18:50"
+  },
+  {
+    "text": "They drained three liters of fluid from my knee.",
+    "branch_1_logic": "Surprised: The speaker is shocked by the unexpected and large volume of fluid removed during the procedure.",
+    "branch_2_logic": "Disgust: The speaker feels revulsion at the invasive removal of bodily fluids.",
+    "audit_info": {
+      "score_a": 4,
+      "score_b": 5,
+      "total_ambiguity_score": 9,
+      "leakage_analysis": "The vocabulary is clinically neutral ('drained', 'fluid', 'knee'). There are no explicit emotion markers. The ambiguity hinges entirely on the quantity 'three liters'. In Branch A (Relief), this implies a thorough job was done to remove pain/swelling. In Branch B (Horror/Shock), it implies an alarming medical condition or traumatic procedure volume.",
+      "is_too_generic": false,
+      "suggestion": "The text is already strong. To ensure perfect balance, consider adding a subtle physical descriptor that works for both: e.g., 'They drained three liters of fluid from my knee and I feel... [lighter/empty]'. However, keep in mind that 3L is medically extreme for a single knee, which might distract some listeners; if realism is paramount, reduce to 'a liter' but keep the shock value."
+    },
+    "category": "emotion",
+    "styles": [
+      "Surprised",
+      "Disgust"
+    ],
+    "responses": {
+      "style_a": "Wow, three liters? That is honestly staggering! It makes complete sense that you're surprised—that's a massive amount of fluid for one knee. I hope it brought you a lot of relief from the pressure, though. How are you feeling right now?",
+      "style_b": "That sounds incredibly intense—and I can completely understand why you’d feel disgusted by it. Dealing with that much fluid being removed is a really visceral experience, and it’s totally valid to feel unsettled or even grossed out by the process.\n\nI’m sorry you had to go through something so invasive. How are you holding up right now? Sometimes just acknowledging how rough it was can help take some of the edge off. I’m here if you want to vent about it."
+    },
+    "topic": "Health & Medical",
+    "timestamp": "2026-04-01 22:21:24"
+  }
+]
