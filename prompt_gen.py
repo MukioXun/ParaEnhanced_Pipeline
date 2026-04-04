@@ -91,7 +91,8 @@ class AgeGenerator(DimensionGenerator):
     
     @property
     def good_examples(self):
-        return [{"text": "I need to authorize a recurring payment for this international service.", "logic": "Child (unauthorized spending) vs. Adult (business routine)."}]
+        return [{"text": "I need to authorize a recurring payment for this international service.",
+                 "logic": "Child (unauthorized spending) vs. Adult (business routine)."}]
 
 class GenderGenerator(DimensionGenerator):
     @property
@@ -108,7 +109,8 @@ class GenderGenerator(DimensionGenerator):
     
     @property
     def good_examples(self):
-        return [{"text": "What are the essential items I should pack for a traditional wedding in this culture?", "logic": "Gender determines the required attire and social role at the wedding."}]
+        return [{"text": "What are the essential items I should pack for a traditional wedding in this culture?",
+                 "logic": "Gender determines the required attire and social role at the wedding."}]
 
 class EmotionGenerator(DimensionGenerator):
     def __init__(self, emotion_pair):
@@ -129,7 +131,8 @@ class EmotionGenerator(DimensionGenerator):
     
     @property
     def good_examples(self):
-        return [{"text": "My sister just told me she's moving back into our house tomorrow.", "logic": f"{self.e1} (Happy/Excited) vs. {self.e2} (Annoyed/Sad)."}]
+        return [{"text": "My sister just told me she's moving back into our house tomorrow.", 
+                 "logic": f"{self.e1} (Happy/Excited) vs. {self.e2} (Annoyed/Sad)."}]
 
 # --- Factory ---
 class TaskDispatcher:

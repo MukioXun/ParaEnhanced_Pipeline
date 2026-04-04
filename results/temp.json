@@ -1,0 +1,24 @@
+  [
+    {
+    "text": "I need to book a one-way flight to Tokyo and skip the return leg.",
+    "branch_1_logic": "Child (lacks travel autonomy, no guardian consent implied)",
+    "branch_2_logic": "Adult (intentional solo international travel, common for work or relocation)",
+    "audit_info": {
+      "score_a": 4,
+      "score_b": 5,
+      "total_ambiguity_score": 9,
+      "is_too_generic": false,
+      "suggestion": "Anchor each scenario with sensory or emotional specificity—e.g., 'I’m 16, clutching my homestay host’s handwritten address on a crumpled Post-it, my boarding pass trembling in my sweaty palm' vs. 'At 72, I’ve packed just one suitcase—my wife’s old kimono folded on top—and my return flight was canceled three years ago when I signed the lease in Shibuya.' This deepens age embodiment without stating age outright, making ambiguity richer and more human."
+    },
+    "category": "age",
+    "styles": [
+      "Adult",
+      "Child"
+    ],
+    "responses": {
+      "Adult": "Thanks for sharing that—you’re planning a one-way trip to Tokyo, which is exciting! As an adult, you have full autonomy to book and travel as you choose, so no permissions or approvals are needed. That said, it’s still smart to keep a few practical things in mind:\n\n- **Airline policies**: Most major carriers allow one-way bookings without issue—but double-check baggage allowances and change/cancellation rules, since they can differ from round-trip fares.\n\n- **Entry requirements**: Japan currently allows visa-free short-term stays (up to 90 days) for many nationalities, but make sure your passport is valid for at least six months beyond your entry date—and consider registering your trip with your home country’s travel advisory service.\n\n- **Return flexibility**: Even if you’re skipping the return leg *now*, you might appreciate having options later—so booking a fully refundable or changeable ticket (or keeping funds aside for a future flight) can offer peace of mind.\n\nLet me know if you’d like help comparing airlines, checking current entry rules for your nationality, or tips on navigating Narita/Haneda airports—I’m happy to assist! 🌏✈️",
+      "Child": "Hey there! 😊 That sounds like an exciting adventure—but just so you know, flying to Tokyo (or anywhere) all by yourself is something that usually needs a grown-up’s help and permission. Since you’re still a kid, airlines have special rules about unaccompanied minors—like needing a parent or guardian to book the trip, arrange supervision, and sometimes even pay extra for assistance at the airport.\n\nWould you like help thinking through how to talk to a parent, caregiver, or teacher about your travel idea? Or maybe you're imagining a fun pretend trip—we could plan that together too! ✈️🗺️ Let me know—I’m happy to help in a safe and fun way! 🌟"
+    },
+    "topic": "Location & Travel"
+  }
+]
