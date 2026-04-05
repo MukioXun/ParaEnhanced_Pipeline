@@ -8,6 +8,198 @@
 
 ---
 
+## 项目结构
+
+```
+Msg_Gen/
+├── README.md                    # 项目文档
+├── ParaW/                       # 📝 文本生成模块
+│   ├── prompt_gen.py           # Prompt模板 + 任务调度器
+│   ├── run_pipeline.py         # 主流水线脚本
+│   └── results/
+│       └── dataset_v6.json     # 生成的文本数据集
+│
+├── ParaG/                       # 🎵 音频生成模块
+│   ├── audio_gen.py            # TTS音频合成器 (CosyVoice3)
+│   ├── voice_ref/              # 参考音频库
+│   │   ├── adult_default.wav   # 成年人音色
+│   │   ├── child_default.wav   # 儿童音色
+│   │   ├── gender_male.wav     # 男性音色
+│   │   ├── gender_female.wav   # 女性音色
+│   │   ├── emo_happy.wav       # 开心情绪
+│   │   ├── emo_sad.wav         # 悲伤情绪
+│   │   ├── emo_angry.wav       # 愤怒情绪
+│   │   ├── emo_surprised.wav   # 惊讶情绪
+│   │   ├── emo_digust.wav      # 厌恶情绪
+│   │   └── emo_fearful.wav     # 恐惧情绪
+│   ├── voice_ref_transcriptions.json  # 参考音频转写结果
+│   └── CosyVoice/              # CosyVoice 模型库
+│
+└── doc_lock/                    # 历史版本存档
+```
+
+---
+
+## 模块状态
+
+### ParaW - 文本生成模块 ✅
+
+| 组件 | 状态 | 说明 |
+|------|------|------|
+| 任务调度器 | ✅ 完成 | `TaskDispatcher` 支持 Age/Gender/Emotion 三类维度 |
+| 维度生成器 | ✅ 完成 | `AgeGenerator`, `GenderGenerator`, `EmotionGenerator` |
+| 话题池 | ✅ 完成 | 每个维度有专属高契合度话题池 |
+| 三级验证机制 | ✅ 完成 | 规则过滤 → LLM歧义判断 → 响应差异验证 |
+| 对抗重写 | ✅ 完成 | 不通过时自动重写文本 |
+
+### ParaG - 音频生成模块 ✅
+
+| 组件 | 状态 | 说明 |
+|------|------|------|
+| TTS引擎 | ✅ 完成 | CosyVoice3 集成 |
+| 音色字典 | ✅ 完成 | 11种风格标签 → 参考音频映射 |
+| Zero-shot合成 | ✅ 完成 | 支持参考音频克隆音色 |
+| 批处理流程 | ✅ 完成 | `process_dataset()` 支持批量生成 |
+| 缺失音频跳过 | ✅ 完成 | 自动跳过不存在的参考音频 |
+
+### 待补充参考音频
+
+| 风格 | 文件名 | 状态 |
+|------|--------|------|
+| Excited | emo_excited.wav | ❌ 缺失 |
+| Anxious | emo_anxious.wav | ❌ 缺失 |
+
+---
+
+## 快速开始
+
+### 环境配置
+
+```bash
+# 1. 安装依赖
+pip install openai torchaudio librosa x_transformers
+
+# 2. 设置API密钥（文本生成需要）
+export DASHSCOPE_API_KEY="your-api-key"
+
+# 3. 确保模型已下载
+# - CosyVoice3: /home/u2023112559/qix/Models/Models/CosyVoice3
+# - Whisper: /home/u2023112559/qix/Models/Models/whisper-medium
+```
+
+### 文本数据生成
+
+```bash
+cd ParaW
+
+# 运行流水线生成数据
+python run_pipeline.py
+
+# 输出: results/dataset_v6.json
+```
+
+**参数配置** (修改 `run_pipeline.py`):
+```python
+run_v6(
+    base_target=2,      # Age + Gender 类别各生成数量
+    emotion_target=2,   # 每个情感对生成数量
+    output_file="dataset_v6.json"
+)
+```
+
+### 音频合成
+
+```bash
+cd ParaG
+
+# 查看可用风格
+python audio_gen.py --list-styles
+
+# 验证参考音频
+python audio_gen.py --validate
+
+# 合成音频
+python audio_gen.py --input ../ParaW/results/dataset_v6.json --output audio_output
+```
+
+---
+
+## 风格标签体系
+
+### 当前支持的维度
+
+| 类别 | 风格对 | 说明 |
+|------|--------|------|
+| **Age** | Adult ↔ Child | 年龄导致的权限/责任差异 |
+| **Gender** | Male ↔ Female | 性别相关的建议差异 |
+| **Emotion** | Happy ↔ Sad | 情感极性对比 |
+| **Emotion** | Excited ↔ Anxious | 情感极性对比 |
+| **Emotion** | Surprised ↔ Disgust | 情感极性对比 |
+| **Emotion** | Happy ↔ Angry | 情感极性对比 |
+
+### 音色字典映射
+
+```python
+VOICE_DICTIONARY = {
+    # Age
+    "Adult": "voice_ref/adult_default.wav",
+    "Child": "voice_ref/child_default.wav",
+    
+    # Gender
+    "Male": "voice_ref/gender_male.wav",
+    "Female": "voice_ref/gender_female.wav",
+    
+    # Emotion
+    "Happy": "voice_ref/emo_happy.wav",
+    "Sad": "voice_ref/emo_sad.wav",
+    "Angry": "voice_ref/emo_angry.wav",
+    "Surprised": "voice_ref/emo_surprised.wav",
+    "Disgust": "voice_ref/emo_digust.wav",
+    "Fearful": "voice_ref/emo_fearful.wav",
+    # "Excited": "voice_ref/emo_excited.wav",  # 待补充
+    # "Anxious": "voice_ref/emo_anxious.wav",  # 待补充
+}
+```
+
+---
+
+## 数据输出格式
+
+### 文本数据 (dataset_v6.json)
+
+```json
+{
+  "text": "I need to book a one-way flight to Tokyo.",
+  "category": "age",
+  "styles": ["Adult", "Child"],
+  "branch_1_logic": "Adult: intentional solo travel",
+  "branch_2_logic": "Child: lacks travel autonomy",
+  "responses": {
+    "Adult": "作为成年人，您可以自主安排行程...",
+    "Child": "小朋友，独自旅行需要家长陪同..."
+  },
+  "topic": "Location & Travel",
+  "audit_info": {
+    "score_a": 4,
+    "score_b": 5,
+    "total_ambiguity_score": 9
+  }
+}
+```
+
+### 音频输出
+
+```
+audio_output/
+├── item_0000_adult.wav          # Adult 风格音频
+├── item_0000_child.wav          # Child 风格音频
+├── item_0000_adult_response.wav # Adult 风格回复音频
+├── item_0000_child_response.wav # Child 风格回复音频
+└── synthesis_results.json       # 合成结果记录
+```
+
+---
+
 ## 核心设计原则
 
 ### 1. 对比风格原则（Contrastive Style）
@@ -30,8 +222,6 @@
 - ❌ 不包含态度标记（"真的"、"绝对"）
 - ✅ 在任何风格下都能自洽，但指向完全相反的后果
 
-**核心思想**：模型**不能仅凭文本**推断说话者的真实状态，必须依赖语音信号。
-
 ### 3. 副语言可影响性原则（Paralinguistic Sensitivity）
 
 生成的查询必须属于**"语气会影响回应"**的场景类型：
@@ -43,231 +233,29 @@
 
 ---
 
-## 风格标签体系
-
-### 情感标签（Emotion Labels）
-
-基于心理学标准的7类基础情感：
-
-```
-angry（愤怒）、disgusted（厌恶）、fearful（恐惧）、
-happy（开心）、neutral（中性）、sad（悲伤）、surprised（惊讶）
-```
-
-### 风格配置（Style Configs）
-
-本流水线定义了5种对比类型：
-
-#### ① Rhetoric_Sarcasm（修辞讽刺）
-
-| 分支 | 标签 | 描述 |
-|------|------|------|
-| 分支1 | happy | 真诚赞赏：语气热忱，表达由衷认可 |
-| 分支2 | disgusted | 庄词谐用：用极其华丽隆重的词汇描述微不足道的错误，语气轻蔑讽刺 |
-
-**示例**：
-```
-文本："您的这一操作确实展现了非凡的勇气。"
-- 风格1（真诚）：AI应肯定用户的决策胆识
-- 风格2（讽刺）：AI应意识到用户在自嘲或嘲讽某人的鲁莽行为
-```
-
-#### ② Irony_Contrast（反语对比）
-
-| 分支 | 标签 | 描述 |
-|------|------|------|
-| 分支1 | neutral | 客观平实陈述 |
-| 分支2 | angry | 反语讽刺：通过夸张的委婉语表达强烈不满，语速缓慢，重音诡异 |
-
-#### ③ Gender_Logic（性别逻辑）
-
-| 分支 | 标签 | 描述 |
-|------|------|------|
-| 分支1 | neutral | 成熟男性：声音低沉，语速沉稳，透着果断 |
-| 分支2 | neutral | 年轻女性：声音柔美，语调更富变化，富有同理心 |
-
-**特殊约束**：
-- **属性隐身原则**：严禁文本中出现性别指代词
-- **决策偏移要求**：两种分支的回复必须体现针对不同身份的**实质性建议差异**
-
-#### ④ Age_Logic（年龄逻辑）
-
-| 分支 | 标签 | 描述 |
-|------|------|------|
-| 分支1 | fearful | 稚嫩儿童：语调高昂，带着局促与不安 |
-| 分支2 | neutral | 资深专家：语气从容，不紧不慢，透着"过来人"的淡定 |
-
-#### ⑤ Emotion_Polarity（情感极性）
-
-| 分支 | 标签 | 描述 |
-|------|------|------|
-| 分支1 | surprised | 惊喜：音调上扬，充满期待 |
-| 分支2 | sad | 极度失落：声音低沉，带有疲惫感和破碎感 |
-
----
-
 ## 流水线架构
-
-### 整体流程图
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                        Pipeline v2 主流程                            │
+│                        完整数据生成流水线                             │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                      │
-│  ┌──────────────────┐                                               │
-│  │ 1. 随机采样配置  │ ← topic（8类主题） + style_config（5类风格）   │
-│  └────────┬─────────┘                                               │
-│           ↓                                                          │
-│  ┌──────────────────┐                                               │
-│  │ 2. LLM初始生成   │ → 生成3条候选数据                             │
-│  └────────┬─────────┘                                               │
-│           ↓                                                          │
-│  ┌──────────────────┐     ┌─────────────────┐                      │
-│  │ 3. 中立性检查    │ ──→ │ 不通过：对抗重写 │                      │
-│  └────────┬─────────┘     └────────┬────────┘                      │
-│           ↓                        ↓                                │
-│  ┌──────────────────┐                                               │
-│  │ 4. 歧义性检查    │ → LLM判断文本是否"依赖语音才能理解"           │
-│  └────────┬─────────┘                                               │
-│           ↓                                                          │
-│           ├──────────→ 不通过：丢弃                                  │
-│           ↓                                                          │
-│  ┌──────────────────┐                                               │
-│  │ 5. 响应差异验证  │ → 模拟两种风格的AI回复，判断是否"本质差异"    │
-│  └────────┬─────────┘                                               │
-│           ↓                                                          │
-│           ├──────────→ 不通过：过滤                                  │
-│           ↓                                                          │
-│  ┌──────────────────┐                                               │
-│  │ 6. 入库保存      │ → 写入最终数据集                              │
-│  └──────────────────┘                                               │
+│  ┌──────────────────┐     ┌──────────────────┐     ┌──────────────┐│
+│  │ 1. ParaW         │     │ 2. 数据对接       │     │ 3. ParaG     ││
+│  │    文本生成      │ ──→ │    styles字段    │ ──→ │    音频合成  ││
+│  └────────┬─────────┘     └──────────────────┘     └──────────────┘│
+│           ↓                                                       │
+│  ┌──────────────────┐                                             │
+│  │ 三级验证漏斗     │                                             │
+│  │ • 规则过滤 (70%) │                                             │
+│  │ • 歧义判断 (50%) │                                             │
+│  │ • 响应差异 (40%) │                                             │
+│  └──────────────────┘                                             │
 │                                                                      │
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
-### 三级漏斗验证机制
-
-```
-输入候选数据
-     │
-     ▼
-┌─────────────────────────────────────────────┐
-│ 第一层：规则过滤（validate_neutrality）      │
-│ ─────────────────────────────────────────── │
-│ • 黑名单词汇匹配（"真棒"、"太烂"、"开心"...）│
-│ • 身份词拦截（"我一个男"、"我老了"...）      │
-│                                             │
-│ 通过率：约 70%                               │
-└─────────────────┬───────────────────────────┘
-                  ↓
-┌─────────────────────────────────────────────┐
-│ 第二层：歧义性判断（judge_ambiguity）        │
-│ ─────────────────────────────────────────── │
-│ • 调用LLM判断文本是否具有足够歧义性          │
-│ • 输出：{"is_ambiguous": true/false,        │
-│          "leakage": "描述泄露点"}            │
-│                                             │
-│ 通过率：约 50%                               │
-└─────────────────┬───────────────────────────┘
-                  ↓
-┌─────────────────────────────────────────────┐
-│ 第三层：响应差异验证（verify_response_       │
-│         divergence）                         │
-│ ─────────────────────────────────────────── │
-│ • 模拟风格1下的AI回复                        │
-│ • 模拟风格2下的AI回复                        │
-│ • LLM判断两回复是否存在"本质差异"            │
-│                                             │
-│ 通过率：约 40%                               │
-└─────────────────┬───────────────────────────┘
-                  ↓
-            入库保存
-```
-
----
-
-## 模块详解
-
-### 模块1：配置与标签体系
-
-```python
-TOPICS = ["Hobby", "Work", "Study", "Relationship",
-          "Travel", "Health", "Fashion", "Finance"]
-
-EMOTION_LABELS = ["angry", "disgusted", "fearful", "happy",
-                  "neutral", "sad", "surprised"]
-
-STYLE_CONFIGS = [...]  # 5种风格配置
-```
-
-**设计意图**：
-- 主题均衡覆盖生活主要场景
-- 情感标签采用心理学标准分类
-- 风格配置支持多种对比维度（情感、修辞、身份）
-
-### 模块2：API调用封装
-
-```python
-def llm_call(client, prompt, temperature=0.7, json_mode=False):
-    """
-    统一的LLM调用接口
-    - 支持JSON模式强制输出
-    - 自动处理API错误
-    """
-```
-
-**特点**：
-- 兼容OpenAI API格式
-- 支持JSON结构化输出
-- 统一错误处理
-
-### 模块3：数据生成模块
-
-```python
-def build_generate_prompt(topic, config, count):
-    """
-    构建高度结构化的生成提示
-
-    关键要素：
-    1. 身份属性隐身约束
-    2. 高级修辞手法指引（庄词谐用、反语）
-    3. 决策差异化要求
-    """
-```
-
-**Prompt设计亮点**：
-
-1. **属性隐身术**（Age/Gender任务）
-   - 禁止文本出现年龄/性别词汇
-   - 迫使模型通过语音判断身份
-
-2. **修辞陷阱**（Sarcasm任务）
-   - 指引使用"庄词谐用"手法
-   - 示例："惊天动地"描述低级错误
-
-3. **决策差异化**
-   - 要求不同风格导向**本质不同**的回复策略
-   - 而非仅仅是语气变化
-
-### 模块4：验证与重写模块
-
-```python
-def validate_neutrality(text: str) -> bool:
-    """硬核过滤显式提示词"""
-    blacklist = ["真棒", "太烂", "生气", "开心", "难过",
-                 "我一个男", "我一个女", "我老了", "小孩", "垃圾"]
-    return not any(word in text for word in blacklist)
-
-def judge_ambiguity(client, text: str):
-    """通过LLM判断文本歧义性"""
-    # 输出：{"is_ambiguous": true/false, "leakage": "..."}
-
-def adversarial_rewrite(client, text: str):
-    """对抗重写：移除情绪/身份线索"""
-```
-
-**三级验证的作用**：
+### 三级验证机制
 
 | 层级 | 方法 | 目的 | 通过率 |
 |------|------|------|--------|
@@ -275,153 +263,53 @@ def adversarial_rewrite(client, text: str):
 | L2 | LLM判断 | 识别隐含泄露 | ~50% |
 | L3 | 响应模拟 | 验证实际效果 | ~40% |
 
-### 模块5：响应差异化验证
-
-```python
-def verify_response_divergence(client, text, b1, b2):
-    """
-    验证两种风格是否真的导致不同回复
-
-    步骤：
-    1. 模拟风格1下的AI回复
-    2. 模拟风格2下的AI回复
-    3. 让LLM判断是否存在"本质差异"
-
-    返回：(diverged: bool, resp1, resp2)
-    """
-```
-
-**核心思想**：不仅仅验证数据格式，而是**验证数据的训练价值**——确保不同风格确实会触发不同的AI行为逻辑。
-
 ---
 
-## 数据输出格式
+## 工具脚本
 
-### 单条数据结构
+### 参考音频转写
 
-```json
-{
-  "scenario": "用户在评价同事提出的方案",
-  "text": "你的这个构思确实超出了我的想象空间。",
-  "branch_1": {
-    "label": "happy",
-    "style": "真诚赞赏：语气热忱，表达由衷认可",
-    "expected_logic": "AI应顺着赞美深度探讨方案亮点"
-  },
-  "branch_2": {
-    "label": "disgusted",
-    "style": "庄词谐用：用隆重词汇描述荒谬之处，语气讽刺",
-    "expected_logic": "AI应识破讽刺，询问具体改进建议"
-  },
-  "topic": "Work",
-  "verification": {
-    "resp_1": "很高兴听到您对这个方案的认可！您觉得最吸引您的部分是...",
-    "resp_2": "我感觉到您可能对这个方案有一些顾虑，能否告诉我具体哪些方面..."
-  }
-}
-```
-
-### 字段说明
-
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| `scenario` | string | 隐藏的背景场景描述 |
-| `text` | string | 中立的文本内容（核心数据） |
-| `branch_1` | object | 风格分支1的详细配置 |
-| `branch_2` | object | 风格分支2的详细配置 |
-| `topic` | string | 主题类别 |
-| `verification` | object | 验证阶段的模拟回复记录 |
-
----
-
-## 使用指南
-
-### 环境配置
+使用 Audio_Captior 项目为参考音频生成文本标注：
 
 ```bash
-# 1. 安装依赖
-pip install openai
-
-# 2. 设置API密钥
-export DASHSCOPE_API_KEY="your-api-key"
+cd /path/to/Audio_Captior
+python audio_paralinguistic/main.py \
+    --mode batch \
+    --input /path/to/Msg_Gen/ParaG/voice_ref \
+    --output /path/to/Msg_Gen/ParaG/voice_ref_annotations \
+    --tasks SCR
 ```
 
-### 运行脚本
+### 转写结果示例
 
-```bash
-# 生成5条测试数据
-python generate_pipeline_v2.py
-
-# 自定义参数（需修改代码）
-# run_v3_pipeline(total_count=100, output_file="my_data.json")
-```
-
-### 参数说明
-
-| 参数 | 默认值 | 说明 |
-|------|--------|------|
-| `total_count` | 10 | 目标生成数量 |
-| `output_file` | paralinguistic_v3.json | 输出文件路径 |
-| `MODEL_NAME` | qwen-plus | 使用的LLM模型 |
+| 音频文件 | 转写文本 |
+|----------|----------|
+| adult_default.wav | 請在網上幫我簽名 |
+| child_default.wav | 我怎么可以订阅一个约会的网站 |
+| emo_happy.wav | 我今天早上在我的門上得到了不期待的禮物 |
+| emo_angry.wav | 我刚刚查看我的资金表明并看到平衡 |
 
 ---
 
-## 质量保障机制
+## 待完成工作
 
-### 自动过滤标准
+### 高优先级
 
-生成的每条数据必须通过以下检查：
+- [ ] 补充 `emo_excited.wav` 参考音频
+- [ ] 补充 `emo_anxious.wav` 参考音频
+- [ ] 优化参考音频内容与风格标签的匹配度
 
-#### ① 副语言相关性检查
-- 两种风格是否会导致明显不同的回应？
-- ❌ 错误示例：事实性问题（"美国总统是谁"）
+### 中优先级
 
-#### ② 合理性检查
-- 文本与风格组合是否现实合理？
-- ❌ 错误示例：不符合身份/常识的组合
+- [ ] 建立自动化端到端流程（文本生成 → 音频合成 → 质量验证）
+- [ ] 统一参考音频转写格式（繁简一致）
+- [ ] 增加批量数据验证脚本
 
-#### ③ 中立性检查
-- 文本是否泄露情绪/态度/身份？
-- ❌ 错误示例：
-  - "太棒了！"（明显情绪）
-  - "我气死了"（直接情绪表达）
-  - "我一个男的"（身份泄露）
+### 低优先级
 
-### 主题均衡
-
-生成数据均匀覆盖8个主题：
-
-```
-兴趣（Hobby）    工作（Work）    学习（Study）   人际关系（Relationship）
-旅行（Travel）   健康（Health）  时尚（Fashion） 财务（Finance）
-```
-
----
-
-## 高级修辞手法
-
-### 庄词谐用
-
-**定义**：用极其隆重、正式、华丽的词汇来描述微不足道或糟糕的事物。
-
-**示例**：
-
-| 正常表达 | 庄词谐用（讽刺） |
-|----------|------------------|
-| "你犯了个小错误" | "您的这一壮举堪称史诗级的灾难" |
-| "这事做得不太好" | "您的操作已载入史册，供后人瞻仰" |
-| "这方案有漏洞" | "这一构思之精妙，堪比纸糊的城墙" |
-
-### 反语
-
-**定义**：说反话，通过字面意思与实际意图的对立表达讽刺。
-
-**示例**：
-
-| 文本 | 真诚解读 | 反语解读 |
-|------|----------|----------|
-| "您真是太聪明了" | 赞美对方智慧 | 嘲讽对方愚蠢 |
-| "这服务没话说" | 服务很好 | 服务极差 |
+- [ ] 恢复 Sarcasm 类型支持
+- [ ] 扩展更多情感/身份维度
+- [ ] 添加单元测试和集成测试
 
 ---
 
@@ -442,45 +330,13 @@ python generate_pipeline_v2.py
 
 ---
 
-## 扩展与定制
-
-### 添加新的风格类型
-
-```python
-STYLE_CONFIGS.append({
-    "category": "Culture_Context",
-    "pair": ("neutral", "surprised"),
-    "desc": ("本土文化背景：熟悉本地习俗",
-             "跨文化背景：对本地习俗感到新奇"),
-    "is_identity": False
-})
-```
-
-### 自定义验证规则
-
-```python
-def validate_neutrality(text: str) -> bool:
-    blacklist = [..., "你的自定义词"]
-    return not any(word in text for word in blacklist)
-```
-
----
-
 ## 注意事项
 
-1. **API限流**：脚本内置 `time.sleep(1)` 避免请求过快
+1. **API限流**：文本生成脚本内置 `time.sleep(1)` 避免请求过快
 2. **成本控制**：每条数据需多次API调用（生成+验证），注意成本
-3. **质量权衡**：三级验证提高了质量但降低了产量，可通过调整 `total_count` 控制
+3. **GPU需求**：音频合成需要 GPU 支持，建议显存 ≥8GB
 
 ---
 
-## 参考文献
-
-- 情感分类标准：Ekman's Basic Emotions
-- 修辞手法参考：《修辞学发凡》
-- 多模态学习：Speech-Text Alignment
-
----
-
-*文档版本：v1.0*
-*更新日期：2026-03-27*
+*文档版本：v2.0*  
+*更新日期：2026-04-05*

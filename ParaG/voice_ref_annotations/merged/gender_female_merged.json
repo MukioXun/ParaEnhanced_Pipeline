@@ -1,0 +1,19 @@
+{
+  "audio_id": "gender_female",
+  "file_path": "/home/u2023112559/qix/Project/Final_Project/SFT_DATA/Msg_Gen/ParaG/voice_ref/gender_female.wav",
+  "content_metadata": {
+    "duration_seconds": 3.72,
+    "sample_rate": 24000,
+    "channels": 1,
+    "format": "wav"
+  },
+  "acoustic_features": {
+    "low_level": {},
+    "high_level": {
+      "transcription": {
+        "text": "",
+        "language": "unknown"
+      }
+    }
+  }
+}

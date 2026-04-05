@@ -1,0 +1,16 @@
+[
+  {
+    "text": "你好，很高兴认识你。",
+    "styles": ["Happy"],
+    "category": "greeting",
+    "responses": {
+      "Happy": "我也很高兴认识你！"
+    }
+  },
+  {
+    "text": "今天天气真不错。",
+    "styles": ["Adult", "Male"],
+    "category": "casual",
+    "responses": {}
+  }
+]

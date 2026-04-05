@@ -1,0 +1,42 @@
+{
+  "adult_default": {
+    "text": "請在網上幫我簽名",
+    "language": "zh"
+  },
+  "child_default": {
+    "text": "我怎么可以订阅一个约会的网站",
+    "language": "zh"
+  },
+  "emo_angry": {
+    "text": "我刚刚查看我的资金表明并看到平衡",
+    "language": "zh"
+  },
+  "emo_digust": {
+    "text": "我刚刚查看我的资金表明并看到平衡",
+    "language": "zh"
+  },
+  "emo_fearful": {
+    "text": "我今天早上在我的門上得到了不期待的禮物",
+    "language": "zh"
+  },
+  "emo_happy": {
+    "text": "我今天早上在我的門上得到了不期待的禮物",
+    "language": "zh"
+  },
+  "emo_sad": {
+    "text": "我刚刚查看我的资金表明并看到平衡",
+    "language": "zh"
+  },
+  "emo_surprised": {
+    "text": "我今天早上在我的門上得到了不期待的禮物",
+    "language": "zh"
+  },
+  "gender_female": {
+    "text": "我对于我这样的人的患者的患者的抗生抗生是否重要?",
+    "language": "zh"
+  },
+  "gender_male": {
+    "text": "我对于我这样的人的患者的患者的抗生抗生是否重要?",
+    "language": "zh"
+  }
+}

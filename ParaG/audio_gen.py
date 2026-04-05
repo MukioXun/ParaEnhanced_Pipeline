@@ -3,8 +3,9 @@ Audio Generation Module for TTS Synthesis
 读取 dataset JSON 文件，根据 style 标签选择参考音色进行 TTS 合成
 """
 import sys
-sys.path.append('CosyVoice/third_party/Matcha-TTS')
-from CosyVocie.cosyvoice.cli.cosyvoice import AutoModel
+sys.path.insert(0, 'CosyVoice')
+sys.path.insert(0, 'CosyVoice/third_party/Matcha-TTS')
+from cosyvoice.cli.cosyvoice import CosyVoice3
 import torchaudio
 import json
 import os
@@ -41,12 +42,12 @@ VOICE_DICTIONARY: Dict[str, VoiceReference] = {
     # Gender 相关音色
     "Male": VoiceReference(
         style="Male",
-        audio_path=str(VOICE_REFERENCE_DIR / "male_default.wav"),
+        audio_path=str(VOICE_REFERENCE_DIR / "gender_male.wav"),
         description="男性声音"
     ),
     "Female": VoiceReference(
         style="Female",
-        audio_path=str(VOICE_REFERENCE_DIR / "female_default.wav"),
+        audio_path=str(VOICE_REFERENCE_DIR / "gender_female.wav"),
         description="女性声音"
     ),
 
@@ -78,7 +79,7 @@ VOICE_DICTIONARY: Dict[str, VoiceReference] = {
     ),
     "Disgust": VoiceReference(
         style="Disgust",
-        audio_path=str(VOICE_REFERENCE_DIR / "emo_disgust.wav"),
+        audio_path=str(VOICE_REFERENCE_DIR / "emo_digust.wav"),  # 文件名拼写
         description="厌恶反感的情绪"
     ),
     "Angry": VoiceReference(
@@ -113,11 +114,9 @@ class AudioGenerator:
     def _load_tts_model(self):
         """延迟加载 TTS 模型（如 CosyVoice）"""
         if self._tts_model is None:
-            # TODO: 实际加载模型
-            # from CosyVoice.cosyvoice.cli.cosyvoice import AutoModel
-            self._tts_model = AutoModel(model_dir=MODEL_PATH)
-            print("[INFO] TTS Model loading... (placeholder)")
-            self._tts_model = "placeholder_model"
+            print("[INFO] Loading TTS Model...")
+            self._tts_model = CosyVoice3(model_dir=str(MODEL_PATH))
+            print("[INFO] TTS Model loaded successfully")
         return self._tts_model
 
     def get_voice_reference(self, style: str) -> Optional[VoiceReference]:
@@ -158,8 +157,9 @@ class AudioGenerator:
 
         # 检查参考音频是否存在
         if not os.path.exists(voice_ref.audio_path):
-            print(f"[WARN] Reference audio not found: {voice_ref.audio_path}")
-            print(f"[INFO] Using placeholder synthesis for style: {style}")
+            print(f"[SKIP] Reference audio not found: {voice_ref.audio_path}")
+            print(f"[SKIP] Skipping style: {style}")
+            return False
 
         # 实际 TTS 合成逻辑
         try:
