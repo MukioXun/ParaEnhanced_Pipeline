@@ -1,0 +1,434 @@
+[
+  {
+    "text": "Ugh, I can't believe how many dirty dishes there are piling up in the sink!",
+    "category": "emotion",
+    "topic": "Dirty_Dishes",
+    "styles": [
+      "Angry",
+      "Sad"
+    ],
+    "branch_1_logic": "若用户处于愤怒状态（如因他人长期不承担家务而积怨），需优先认可其公平诉求、避免轻描淡写，回复应聚焦责任归属与协作方案（如'这确实不公平——要不要一起列个分工表？'）。",
+    "branch_2_logic": "若用户处于悲伤/疲惫状态（如独自照料家庭身心俱疲），需优先情感接纳与减压支持，避免问题解决导向，回复应侧重安慰与赋能（如'听起来你真的累坏了，先歇五分钟，我帮你冲杯茶？'）",
+    "reason": "文本表面是抱怨家务负担，但'Ugh'和感叹语气兼具烦躁（Angry）、疲惫（Tired）、无助（Sad）或自嘲式无奈（Amused/Frustrated）等多重情绪可能；不同情绪状态需匹配差异化的共情策略。"
+  },
+  {
+    "text": "Yeah, I noticed that too. It's getting a bit out of hand.",
+    "category": "emotion",
+    "topic": "Dirty_Dishes",
+    "styles": [
+      "Angry",
+      "Sad"
+    ],
+    "branch_1_logic": "若说话人处于Angry状态，该句隐含对失控局面的不满与指责倾向，应优先承认问题严重性、表达立场一致，并提供行动导向回应（如'What part feels most urgent to address?'）以支持掌控感。",
+    "branch_2_logic": "若说话人处于Sad状态，'out of hand'更可能折射无力感或疲惫，需以温和共情切入（如'I hear how overwhelming this has become'），侧重情绪接纳与支持性陪伴，避免过早提解决方案。",
+    "reason": "文本表面中性，但'getting a bit out of hand'具有强烈负面情绪暗示（e.g., frustration, anxiety, anger）或轻微讽刺/无奈（e.g., wry amusement），情感极性未明示；同一表层表述在不同情绪状态下需截然不同的共情策略。"
+  },
+  {
+    "text": "Right? Sometimes it feels like I'm the only one actually washing things.",
+    "category": "emotion",
+    "topic": "Dirty_Dishes",
+    "styles": [
+      "Sad",
+      "Amused"
+    ],
+    "branch_1_logic": "若为Sad：说话人感到孤独、不被支持或家务负担过重，应回应以共情确认（如'That sounds really exhausting and isolating'）+ 支持性行动建议（如'Would it help to brainstorm ways to share the load?'）",
+    "branch_2_logic": "若为Amused：说话人以轻调侃方式表达生活琐事的荒诞感，应回应以温和共鸣+轻松承接（如'Ah, the mythical 'invisible dishwasher' strikes again! 😅'），避免过度安抚而削弱其幽默意图",
+    "reason": "文本包含隐含情绪线索（如'feels like I'm the only one'）但未明确情感极性；可能表达疲惫、委屈（Sad/Frustrated）、幽默自嘲（Amused/Playful）或轻微抱怨（Angry），不同情绪需匹配差异化的共情策略。"
+  },
+  {
+    "text": "Can we work together to clean them up?",
+    "category": "emotion",
+    "topic": "Dirty_Dishes",
+    "styles": [
+      "Happy",
+      "Sad"
+    ],
+    "branch_1_logic": "若说话人处于Happy状态（如兴致勃勃发起环保活动），应以热情共鸣+具体行动支持回应，例如：'Absolutely! Let’s make it fun — I’ll bring gloves and we can turn it into a mini cleanup challenge!'",
+    "branch_2_logic": "若说话人处于Sad状态（如面对反复堆积的垃圾感到无力或沮丧），应回应以共情确认+分担责任+降低执行压力，例如：'I hear how overwhelming this feels — let’s start small together. Would you like me to handle the sorting while you rest?'",
+    "reason": "该句为协作性提议，语义表面中性，但隐含情绪线索模糊：既可能出自积极共情（如面对共同困扰时的乐观合作意愿），也可能源于无奈、疲惫或轻微愤怒（如对混乱现状的隐忍抱怨）；错误归因情绪将导致回应失当（如对疲惫者过度兴奋回应，或对热情者过度安抚）。"
+  },
+  {
+    "text": "Can we talk about the dirty dishes in the sink?",
+    "category": "emotion",
+    "topic": "Dirty_Dishes",
+    "styles": [
+      "Angry",
+      "Tired"
+    ],
+    "branch_1_logic": "若说话人处于Angry状态，句子实为压抑的指责，需优先道歉、共情并立即行动（如'You’re absolutely right — I’ll wash them right now, and I’m sorry they’ve been piling up.'）",
+    "branch_2_logic": "若说话人处于Tired状态，句子反映的是心力交瘁的求助信号，需侧重分担意愿与情感支持（如'I know it’s been overwhelming — let me handle the sink now, and would you like me to take over dinner cleanup too?'）",
+    "reason": "该句表面为中性请求，但语义隐含潜在情绪张力：可能表达轻微不满（如因长期未洗碗而生气）、疲惫无奈（如承担过多家务而疲惫）、或仅是温和提醒（无负面情绪）；不同情绪状态要求截然不同的回应策略。"
+  },
+  {
+    "text": "Yeah, I can't believe how much is piling up. It's really frustrating.",
+    "category": "emotion",
+    "topic": "Dirty_Dishes",
+    "styles": [
+      "Sad",
+      "Angry"
+    ],
+    "branch_1_logic": "If interpreted as Sad (helpless, drained): prioritize empathic validation and gentle support — e.g., 'That sounds really overwhelming; it’s okay to feel this way. Would you like to talk through what’s piling up, or would space/help sorting it feel better?'",
+    "branch_2_logic": "If interpreted as Angry (frustrated with unfairness, inefficiency, or external cause): acknowledge agency and injustice, offer collaborative action — e.g., 'It’s totally valid to be frustrated — especially when things pile up without warning. Want to identify what’s most urgent, or explore ways to lighten the load together?'",
+    "reason": "文本明确表达了负面情绪（'frustrating'） and contextual cue ('can't believe how much is piling up') signals stress or overwhelm, but the intensity and underlying need (e.g., venting vs. seeking solution) introduce pragmatic ambiguity — a reply assuming problem-solving may invalidate if user primarily seeks empathy, while pure validation may feel dismissive if user urgently needs actionable help."
+  },
+  {
+    "text": "I'm sorry you're feeling like that. Is there something bothering you more than just the dishes?",
+    "category": "emotion",
+    "topic": "Dirty_Dishes",
+    "styles": [
+      "Sad",
+      "Angry"
+    ],
+    "branch_1_logic": "若用户处于Sad状态，'feeling like that'可能指向无助、低落或自我否定；回复应强化情感接纳（如'It sounds really heavy to carry alone'）并提供温和支持选项（如'Would you like to talk about it, or would quiet company help more?'）。",
+    "branch_2_logic": "若用户处于Angry状态，'feeling like that'可能隐含被忽视、不公或积怨；回复需先认可合理性（如'It makes sense you'd feel frustrated—this keeps coming up'），避免过早解决问题，优先给予情绪确认与空间，再协同探讨根源。",
+    "reason": "文本表面呈现共情与关切，但‘feeling like that’指代模糊，未明确情绪类型（如Sad/Angry/Frustrated/Overwhelmed），不同情绪需匹配差异化响应策略：悲伤需安抚与陪伴，愤怒需降压与责任澄清，疲惫需支持与减负。"
+  },
+  {
+    "text": "Well, I just feel overwhelmed with everything going on right now.",
+    "category": "emotion",
+    "topic": "Dirty_Dishes",
+    "styles": [
+      "Anxious",
+      "Sad"
+    ],
+    "branch_1_logic": "若识别为Anxious：用户处于高唤醒、失控感状态，回复应聚焦降低认知负荷——提供简明步骤建议（如‘要不要先一起列三件最急的事？’），避免开放式提问或过度共情，强调可控性与即时行动锚点。",
+    "branch_2_logic": "若识别为Sad：用户呈现低能量、耗竭状态，回复应优先情感接纳与减压——使用缓慢节奏语言（如‘听起来你真的撑了很久’），避免建议或解决方案，以陪伴性陈述（‘我在这儿听你说’）建立安全感。",
+    "reason": "文本明确表达了负面情绪（'overwhelmed'），但未指明具体情绪类型（如焦虑、悲伤、愤怒或疲惫），不同底层情绪需匹配差异化共情策略：若为焦虑倾向，需提供结构化支持；若为悲伤/无力感，则需优先情感确认与陪伴。"
+  },
+  {
+    "text": "Maybe we should establish a chores schedule?",
+    "category": "emotion",
+    "topic": "Dirty_Dishes",
+    "styles": [
+      "Happy",
+      "Sad"
+    ],
+    "branch_1_logic": "若说话人处于Happy/轻快状态，此提议反映合作意愿与生活优化意识，应以赞赏+协同落地为策略，如‘好主意！要不要一起列个有趣又公平的清单？’",
+    "branch_2_logic": "若说话人处于Sad/疲惫状态，该句可能是压抑后委婉求助，需先共情再行动，如‘听起来你最近挺累的……是不是家务让你有点喘不过气？我们先聊聊怎么减轻你的负担？’",
+    "reason": "该句为委婉建议，语义中性，但隐含情绪可变：可能出于积极协作意图（如轻松、期待），也可能源于疲惫、不满或长期积压的家务矛盾（隐含烦躁或委屈）；不同情绪底色下，回应需分别强化共建感或优先情绪安抚。"
+  },
+  {
+    "text": "I can't believe they turned against us! After everything we did for them!",
+    "category": "emotion",
+    "topic": "Injustice",
+    "styles": [
+      "Angry",
+      "Sad"
+    ],
+    "branch_1_logic": "若为Angry：用户感到被冒犯与不公，回复应先承认其正当愤怒（如'这确实令人愤慨'），避免淡化情绪，再聚焦于 agency（如'你们付出的努力不该被这样对待，我们可以一起厘清发生了什么'）。",
+    "branch_2_logic": "若为Sad：用户流露深切失望与情感耗竭，回复应优先共情脆弱性（如'听到这个真的让人心疼'），提供情感容纳空间，避免问题解决导向，可温和探询支持需求（如'你现在最需要的是倾听，还是想一起想想接下来怎么走？'）",
+    "reason": "文本表达强烈情绪，但未明确指向具体情绪类型（如愤怒、悲伤、背叛感或震惊），语义上存在情绪多义性：既可能源于被背叛的愤怒，也可能源于失望与心碎的悲伤，不同情绪需匹配差异化的共情策略。"
+  },
+  {
+    "text": "I know, it’s so frustrating to see everything crumble like this.",
+    "category": "emotion",
+    "topic": "Injustice",
+    "styles": [
+      "Angry",
+      "Sad"
+    ],
+    "branch_1_logic": "若用户处于Angry状态：'frustrating'反映对不公或失控的强烈抗议，回复应先确认其正当愤怒（e.g., 'That *is* unjust — no one should have to face this without support'），再聚焦赋能与行动选项。",
+    "branch_2_logic": "若用户处于Sad状态：'crumble' signals grief, exhaustion or hopelessness；回复需优先情感容纳与轻量陪伴（e.g., 'It makes complete sense to feel this heavy — you don’t have to hold it all together right now'），避免建议或解决方案。",
+    "reason": "文本明确表达了负面情绪（'frustrating', 'crumble'），但'frustration'可源于多种底层情绪状态（如 anger、helplessness、sadness、anxiety），不同情绪底色需匹配差异化共情策略：愤怒需承认不公并支持边界设定，而悲伤/overwhelm则需 validation 和减压引导。"
+  },
+  {
+    "text": "You've been pretty quiet lately. Is something bothering you?",
+    "category": "emotion",
+    "topic": "Injustice",
+    "styles": [
+      "Happy",
+      "Sad"
+    ],
+    "branch_1_logic": "若对方情绪为 Happy（例如因专注爱好、内心满足而安静），应以轻快、尊重边界的方式回应，如：'You seem peacefully focused — love that energy! Want to share what’s got you in the zone?'，避免预设问题，转为欣赏与开放邀请。",
+    "branch_2_logic": "若对方情绪为 Sad（如因压力、失落而沉默），需优先传递安全与接纳，采用低强度共情句式，如：'I'm here if you'd like to talk — no pressure, no judgment'，并留出沉默空间，避免追问或解决方案先行。",
+    "reason": "该文本表面中性，但隐含对对方情绪状态的探询；'Is something bothering you?' 暗示对方可能处于负面情绪（如 Sad, Anxious），但说话人并未确认——若对方实际是 Happy（如因沉浸于创作/思考而安静）或 Neutral（如专注工作），过度安抚会显得冒犯；若对方确为 Sad/Anxious，则需共情与支持。"
+  },
+  {
+    "text": "Just the weight of the situation, I guess. It feels heavy.",
+    "category": "emotion",
+    "topic": "Injustice",
+    "styles": [
+      "Sad",
+      "Contemplative"
+    ],
+    "branch_1_logic": "若为Sad情绪：用户正经历心理压抑或无助感，需优先共情与安抚，采用低唤醒、支持性语言（如'That sounds really overwhelming—would you like to talk about what's weighing on you?'）",
+    "branch_2_logic": "若为Contemplative情绪：用户处于深度反思或严肃认知状态，非痛苦导向，应尊重其思绪节奏，采用开放、不打断的回应（如'I hear how seriously you're holding this—what perspective feels most meaningful to you right now?'）",
+    "reason": "文本表达模糊的情绪负荷感（'the weight of the situation', 'feels heavy'），未明确指向具体情绪类型；既可能隐含悲伤、疲惫、焦虑等负面状态，也可能在特定语境中体现庄重、责任感或沉思性的中性/正向情绪，错误归类将导致共情错位。"
+  },
+  {
+    "text": "I've been trying to stay strong through all this.",
+    "category": "emotion",
+    "topic": "Injustice",
+    "styles": [
+      "Sad",
+      "Angry"
+    ],
+    "branch_1_logic": "若说话人处于Sad状态，该句反映耗竭式坚持，需以温和共情、认可付出、提供情感支持为主，避免空洞鼓励；回复应侧重陪伴与减压，如'You don't have to hold it all together — it's okay to rest.'",
+    "branch_2_logic": "若说话人处于Angry状态，'staying strong'可能是对不公或压迫的防御性姿态，隐含愤懑与无力感；回复需先验证情绪正当性，聚焦赋权与行动支持，避免安抚性语言引发二次压抑，如'Your strength is real — and your anger matters too. What feels most urgent to address right now?'",
+    "reason": "文本表达模糊的坚韧姿态，但未明确情绪基调；'all this'指代不明，可能隐含悲伤、愤怒、疲惫、压抑或甚至隐忍的欣慰，不同情绪需截然不同的共情策略。"
+  },
+  {
+    "text": "It’s okay to feel overwhelmed, we're all affected by this.",
+    "category": "emotion",
+    "topic": "Injustice",
+    "styles": [
+      "Sad",
+      "Angry"
+    ],
+    "branch_1_logic": "若用户处于Sad状态，'overwhelmed'反映无力感与情绪耗竭，回复应强调无条件接纳、降低自我要求（如'You don't have to hold it all together'），避免问题解决导向，重在情感见证。",
+    "branch_2_logic": "若用户处于Angry状态，'overwhelmed'可能隐含对系统性压力源的愤怒（如不公平负担、缺乏支持），回复需先验证其愤怒的合理性（如'It makes sense to feel furious when things keep piling up without relief'），再协同探讨边界设定或主张权益。",
+    "reason": "文本表面呈现共情与安抚意图，但'feel overwhelmed'可源于多种情绪状态（如焦虑、悲伤、疲惫、甚至羞耻或挫败），不同底层情绪需匹配差异化回应策略：若为Sad需侧重情感接纳与陪伴，若为Angry则需先认可不公感再引导转化。"
+  },
+  {
+    "text": "So, things haven't calmed down, have they?",
+    "category": "emotion",
+    "topic": "Injustice",
+    "styles": [
+      "Sad",
+      "Angry"
+    ],
+    "branch_1_logic": "若隐含Sad情绪（如长期压力下的疲惫叹息），应理解为求助或倾诉信号，回复需体现共情与支持，如'No, it's been really overwhelming—I'm here to help lighten the load.'",
+    "branch_2_logic": "若隐含Angry情绪（如对持续混乱的不满质问），应理解为对现状的抗议，回复需先承认问题、担责或提供解决方案，如'You're absolutely right—it shouldn't be this chaotic. Let's fix the root cause together.'",
+    "reason": "该句为反义疑问句，语义依赖语境和说话人语气：可表达疲惫无奈（Sad）、焦灼不满（Angry）、或略带调侃的轻松（Happy）；不同情绪下需匹配差异化的共情策略。"
+  },
+  {
+    "text": "No, they're still pretty tense. It's like we're stuck in a loop here.",
+    "category": "emotion",
+    "topic": "Injustice",
+    "styles": [
+      "Sad",
+      "Angry"
+    ],
+    "branch_1_logic": "若说话人处于Sad状态：语句反映无助、耗竭与希望缺失，回复应侧重情感确认、温和陪伴与微小赋能（如‘That sounds really draining—I’m here with you in this loop’），避免空洞鼓励。",
+    "branch_2_logic": "若说话人处于Angry状态：'stuck in a loop'可能暗含对不公、重复失败或他人失责的愤懑，回复需先承认合理性（如‘It makes total sense to feel furious when nothing shifts’），再聚焦责任归因与可控行动点，而非单纯安抚。",
+    "reason": "文本表达了一种持续的紧张感和无力感（'still pretty tense', 'stuck in a loop'），但未明确指向具体情绪类型；可合理解读为疲惫、沮丧、焦虑或无奈等不同负面情绪，也可能隐含压抑的愤怒或深沉的悲伤，不同情绪状态要求差异化的共情与应对策略。"
+  },
+  {
+    "text": "I can sense there's more beneath the surface. What's troubling you?",
+    "category": "emotion",
+    "topic": "Injustice",
+    "styles": [
+      "Sad",
+      "Happy"
+    ],
+    "branch_1_logic": "若用户实际处于Sad/Anxious状态：该句是恰当的共情开启，应回应以倾听、接纳和温和支持，避免建议先行，聚焦情感确认（如'You seem really weighed down by this — I'm here to listen'）。",
+    "branch_2_logic": "若用户实际处于Happy/Excited状态（例如正欲分享好消息但被误读为困扰）：该句构成情感误判，易造成尴尬或阻断表达；应转为开放、积极的承接（如'Oh, something uplifting is coming — I'd love to hear what's on your mind!'）",
+    "reason": "该文本表面是共情式提问，但未明确对方实际情绪状态；'What's troubling you?' 预设对方处于负面情绪（如Sad/Anxious），若对方实则感到喜悦、兴奋或中性（如在分享成就前的铺垫），此提问会引发错位共情甚至冒犯，需根据真实情绪调整回应策略。"
+  },
+  {
+    "text": "Everything feels chaotic, and no one really sees what's wrong. It's frustrating.",
+    "category": "emotion",
+    "topic": "Injustice",
+    "styles": [
+      "Angry",
+      "Sad"
+    ],
+    "branch_1_logic": "若主导情绪为Angry：用户感到不公、被无视，回复应先承认其正当愤怒（如'这确实让人火大——你明明在努力，却没人接住'），避免弱化情绪，聚焦赋权与行动支持（如'你想一起梳理哪些部分最让你觉得被忽略？'）",
+    "branch_2_logic": "若主导情绪为Sad：用户深层需求是被看见与联结，回复应优先情感确认与温柔陪伴（如'听到你独自扛着这些混乱，心都揪起来了'），强调存在性接纳（如'我在这里，慢慢说，我在听'），避免问题解决导向",
+    "reason": "文本明确表达了负面情绪（'chaotic', 'frustrating', 'no one really sees what's wrong'），语义倾向清晰，但存在情绪复合性：既含沮丧/overwhelm（认知负荷高、失控感），又隐含孤独/被忽视的悲伤成分；不同主导情绪（Angry vs Sad）需匹配差异化的共情策略。"
+  },
+  {
+    "text": "It's definitely hard to watch; I can't believe things escalated this far.",
+    "category": "emotion",
+    "topic": "Injustice",
+    "styles": [
+      "Sad",
+      "Angry"
+    ],
+    "branch_1_logic": "若说话人处于Sad情绪：语句反映深切悲悯与情感耗竭，应以温和共情、情感确认和陪伴性语言回应（如‘That sounds deeply painful to witness—would you like to talk about what’s weighing on you?’）",
+    "branch_2_logic": "若说话人处于Angry情绪：语句中‘can’t believe’隐含道德震惊与义愤，需先认可其正当情绪，再转向理性归因或行动支持（如‘It’s completely understandable to feel outraged—what kind of accountability or change do you think is needed here?’）",
+    "reason": "文本表达对事态升级的震惊与共情，但未明确说话人自身情绪倾向——既可能隐含悲伤/无力感（如目击悲剧后的哀恸），也可能隐含愤怒/谴责（如对不公或失控行为的愤慨）；两种情绪需截然不同的回应策略。"
+  },
+  {
+    "text": "It’s really tough... I'm just worried about what else might happen.",
+    "category": "emotion",
+    "topic": "Injustice",
+    "styles": [
+      "Sad",
+      "Anxious"
+    ],
+    "branch_1_logic": "若判定为Sad：说话人处于低能量、无助状态，回复应以情感确认和温暖陪伴为主，如‘That sounds so heavy—I’m here with you’，避免建议或乐观化，优先降低孤独感。",
+    "branch_2_logic": "若判定为Anxious：说话人聚焦于未来不确定性的威胁预期，回复需兼顾情绪接纳与可控感重建，如‘It makes sense to feel on edge when things feel unpredictable—would it help to name one small thing you *can* influence right now?’",
+    "reason": "文本表达模糊的忧虑和不确定性（'It’s really tough...' + 'I'm just worried about what else might happen.'），未明确指向具体情绪极性；既可能隐含悲伤/焦虑（需要安抚），也可能隐含隐忍后的疲惫或危机感升级（需共情+问题解决），情绪底色多义，错误归类易导致共情失效。"
+  },
+  {
+    "text": "Yeah, the crowd shows that a lot of people do laundry at the same time.",
+    "category": "emotion",
+    "topic": "Laundromat",
+    "styles": [
+      "Happy",
+      "Frustrated"
+    ],
+    "branch_1_logic": "若语境表明说话人以轻松幽默或认同态度说出（如笑着吐槽），应采用共鸣式赞赏或轻快回应，例如：'Haha, laundry day really is a group activity! 🧺✨'",
+    "branch_2_logic": "若语境暗示不满（如紧接抱怨‘I’ve been waiting 45 minutes’），则需共情安抚+问题解决导向，例如：'Ugh, that sounds so frustrating — no wonder you’re tired of waiting. Want help finding a quieter time or checking machine availability?'",
+    "reason": "该句表面陈述一个观察（洗衣高峰现象），但未明示说话人态度；可能隐含正面（如对生活气息的认同/幽默感）、负面（如对拥挤/等待的无奈或烦躁）或中性（纯客观描述）情绪，不同情绪需匹配差异化的共情策略。"
+  },
+  {
+    "text": "Hey, but isn't it fun exchanging small talk with others around.",
+    "category": "emotion",
+    "topic": "Laundromat",
+    "styles": [
+      "Happy",
+      "Sad"
+    ],
+    "branch_1_logic": "若为Happy：说话人享受社交互动，回复应延续轻松幽默风格，可加入共鸣式赞赏（如'Absolutely! Those little sparks of connection are delightful'）并适度延伸话题。",
+    "branch_2_logic": "若为Sad：'fun'实为反语，反映社交耗竭或孤独感，回复需转向共情与减压支持（如'I hear that — sometimes small talk feels like emotional labor. It’s okay to step back when you need to'），避免盲目附和。",
+    "reason": "句子表面呈现轻快、反问式语气，但'fun'的语义强度和说话人真实情绪高度依赖语境与语音/表情线索；可能隐含反讽（如疲惫社交后的无奈调侃）或真诚愉悦，情绪极性不明确，需区分Happy与Sad/Angry以避免共情错位。"
+  },
+  {
+    "text": "Unlike the usual just waiting quietly, though I feel a little down today.",
+    "category": "emotion",
+    "topic": "Laundromat",
+    "styles": [
+      "Sad",
+      "Neutral"
+    ],
+    "branch_1_logic": "若判定为Sad：用户正经历轻度抑郁情绪，需以温和共情为主，避免轻率建议；回复应确认感受（'It sounds like today’s weight feels heavier than usual'），提供安全倾诉空间，并谨慎试探支持需求。",
+    "branch_2_logic": "若判定为Neutral：'a little down'仅为临时状态描述，类似口语化谦抑表达（如英语母语者常用down弱化负面程度），实际情绪基线稳定；回复可保持轻量支持（'Hope things lift soon — want to shift gears or keep it low-key?'），侧重尊重自主性而非情感干预。",
+    "reason": "文本明确表达了负面情绪（'I feel a little down today'），但前半句'Unlike the usual just waiting quietly'隐含对比与潜在语境歧义——可能暗示长期压抑后的短暂流露，或日常隐忍下的轻微情绪波动；该表述未锚定情绪强度与归因（如是否由外部事件引发、是否伴随无助感等），导致对共情深度、干预倾向（倾听优先 vs. 主动解困）的响应需差异化。"
+  },
+  {
+    "text": "Oh, is everything okay with you?",
+    "category": "emotion",
+    "topic": "Laundromat",
+    "styles": [
+      "Happy",
+      "Sad"
+    ],
+    "branch_1_logic": "若说话人处于Happy情绪（如轻松调侃、惊喜问候），该句实为友好互动的开场，宜以轻快、共鸣式回应（如'Yes! Just had great news!'）并延续积极节奏。",
+    "branch_2_logic": "若说话人处于Sad情绪（如担忧、疲惫、隐忍求助），该句是试探性关怀，需优先确认状态、提供安全倾诉空间（如'I noticed you seemed quiet—would you like to talk? I'm here.'），避免轻率乐观回应。",
+    "reason": "该问句表面中性，但语境依赖性强：可表达关切（对方可能状态异常）、惊讶（察觉异常迹象）、或客套寒暄；说话人真实情绪未明，若误判为单纯寒暄而忽略潜在负面信号（如对方正经历危机），将导致共情失败。"
+  },
+  {
+    "text": "Yeah, I'm just a bit tired from work, but chatting helps!",
+    "category": "emotion",
+    "topic": "Laundromat",
+    "styles": [
+      "Sad",
+      "Happy"
+    ],
+    "branch_1_logic": "若主导情绪为Sad：说话人正经历工作耗竭，'just a bit tired'是委婉弱化表达，需优先共情疲劳感、认可付出，并提供舒缓型支持（如轻量建议休息、表达陪伴意愿）",
+    "branch_2_logic": "若主导情绪为Happy：'but chatting helps!'是语义重心，表明当前互动已带来真实积极体验，应强化正向反馈、延续轻松节奏，以赞赏/活力语气回应，避免过度聚焦疲惫而削弱其主动寻求联结的积极意图",
+    "reason": "文本表面呈现轻度疲惫（负面倾向）但同时强调聊天带来的积极效用（正面倾向），情感极性存在内在张力与多义性；未明确说话人主导情绪是疲惫主导的低落，还是互动带来的愉悦，错误归类易导致共情失当。"
+  },
+  {
+    "text": "I can't believe how much laundry I've accumulated this week.",
+    "category": "emotion",
+    "topic": "Laundromat",
+    "styles": [
+      "Happy",
+      "Sad"
+    ],
+    "branch_1_logic": "若为Happy情绪：说话人意在分享成就感，应以惊喜和赞赏回应，如'Wow, that’s impressive—what’s your secret for tackling it all?'，强化积极情绪并鼓励延伸分享。",
+    "branch_2_logic": "若为Sad情绪：说话人实则表达压力或倦怠，需优先共情与减压支持，如'I hear you—laundry piles can feel totally overwhelming. Want help brainstorming a lighter routine?'，聚焦安抚与问题缓解。",
+    "reason": "该句表面是惊叹语气，但语义具有情绪多义性：既可能因高效完成大量洗衣而感到自豪/开心（Happy），也可能因积压过多家务而感到疲惫/沮丧（Sad）；错误归因会导致共情失效。"
+  },
+  {
+    "text": "I know the feeling; mine always piles up when I’m busy with work.",
+    "category": "emotion",
+    "topic": "Laundromat",
+    "styles": [
+      "Happy",
+      "Sad"
+    ],
+    "branch_1_logic": "若说话人实为积极情绪（如享受忙碌、以工作为荣），‘piles up’可理解为任务/成就的累积，应以赞赏和共鸣回应，例如：‘That’s awesome—you’re clearly in flow! Want to celebrate a win?’",
+    "branch_2_logic": "若说话人实为消极情绪（如不堪重负、倦怠），‘piles up’暗示压力积压，需优先共情与减压支持，例如：‘It sounds really overwhelming—would pausing or delegating help even a little?’",
+    "reason": "文本表达共情并提及‘piles up’这一模糊动词短语，未明确指向积极或消极情绪；‘the feeling’指代不明，可能对应压力、疲惫、焦虑（负面），也可能指成就感、充实感（正面），情感极性高度依赖说话人隐含态度，需根据实际情绪倾向调整回应策略。"
+  },
+  {
+    "text": "At least laundry day means I have some downtime to supposedly relax.",
+    "category": "emotion",
+    "topic": "Laundromat",
+    "styles": [
+      "Sad",
+      "Happy"
+    ],
+    "branch_1_logic": "若用户实际处于疲惫、压力大或情绪低落状态（Sad），'at least'是无奈妥协，'supposedly relax'暴露休息名不副实；应采用共情式安抚策略，承认劳动负荷与休息权落差，例如：'听起来洗衣日反而成了喘息的奢望——你已经做了很多，真正的放松值得被认真对待。'",
+    "branch_2_logic": "若用户以幽默/接纳姿态面对日常琐事（Happy/Resigned），'at least'体现主动寻找微小确定性，'supposedly'带有温和自嘲；应采用赞赏式共鸣策略，肯定其生活智慧与情绪韧性，例如：'能把洗衣日转化成专属放空时刻，这种把平凡过成仪式感的能力太厉害了！'",
+    "reason": "文本表面呈现中性自嘲式陈述，但'at least'和'supposedly relax'隐含反讽张力，可能折射出疲惫（Sad/Exhausted）或苦中作乐（Happy/Resigned）两种截然不同的情绪底色；错误归类将导致共情错位：若将疲惫误判为轻松会显得轻率，若将积极应对误判为沮丧则削弱用户能动性。"
+  },
+  {
+    "text": "Right? A chance to catch up on my favorite shows too!",
+    "category": "emotion",
+    "topic": "Laundromat",
+    "styles": [
+      "Happy",
+      "Sad"
+    ],
+    "branch_1_logic": "若用户处于Happy状态，该句表达期待与愉悦，回复应延续轻快节奏，用感叹、共鸣和延伸建议（如推荐新剧）强化正向情绪。",
+    "branch_2_logic": "若用户处于Sad状态，'Right?'可能透露孤独感或借娱乐逃避现实压力，'catch up on favorite shows'或是自我安抚行为，回复应优先共情、温和探询状态，并提供支持性选项而非单纯娱乐延伸。",
+    "reason": "文本表面积极（'favorite shows', 'chance to catch up'），但'Right?'引入确认/寻求认同的语气，可能隐含不确定、疲惫、无奈甚至轻微讽刺等潜在负面情绪；缺乏明确情感标记，同一句在轻松语境中是愉悦分享，在高压或倦怠语境中可能是苦中作乐或反语，需依实际情绪调整共情策略。"
+  },
+  {
+    "text": "Yeah, except I don’t even think I’ll get to watch anything today.",
+    "category": "emotion",
+    "topic": "Laundromat",
+    "styles": [
+      "Happy",
+      "Sad"
+    ],
+    "branch_1_logic": "若说话人实为轻松调侃（Happy）：可配合幽默回应，如‘Oh, the plot twist of adulting! 😅 What *would* you binge if time magically appeared?’，延续轻快节奏并激发积极想象。",
+    "branch_2_logic": "若说话人实为疲惫或沮丧（Sad）：需优先共情与减压，如‘That sounds really overwhelming — like your energy tank is on empty. Want to vent, or would a low-effort suggestion (like 5-min ASMR or ambient music) help?’，聚焦接纳与支持性微干预。",
+    "reason": "文本表面陈述事实，但隐含潜在负面情绪（如疲惫、失望、无力感），也可能在特定语境中带轻微自嘲式幽默（轻度正面/中性），情感倾向未明示，需依据说话人真实情绪状态调整回应策略。"
+  },
+  {
+    "text": "Sometimes laundry days just get away from you, right?",
+    "category": "emotion",
+    "topic": "Laundromat",
+    "styles": [
+      "Sad",
+      "Happy"
+    ],
+    "branch_1_logic": "若说话人实际处于疲惫、自责或生活失控的负面情绪中，该句是委婉的情绪求助信号；应采用共情安抚策略，承认压力合理性（如'Laundry piling up can feel so overwhelming — no wonder it slipped through the cracks'），避免轻描淡写，并可提供减压建议。",
+    "branch_2_logic": "若说话人以轻松调侃口吻表达对生活小混乱的坦然接纳，实为展现弹性与幽默感；应匹配积极共鸣策略（如'Right?! It’s like laundry has its own stealth mode 😅 — love how you roll with it!'），强化其自我效能感，避免引入问题解决框架而削弱其积极叙事。",
+    "reason": "该句使用了反问语气和模糊表达（'just get away from you'），语义开放，可承载多种情绪：既可能以轻松自嘲表达轻微懊恼（Sad/Frustrated），也可能带着幽默与共情传递积极接纳感（Happy/Relieved）；错误归因情绪会导致回复失当——如对真实疲惫者调侃会显得轻率，对真正释然者过度安抚则削弱其掌控感。"
+  },
+  {
+    "text": "It's strange being here again after all these years.",
+    "category": "emotion",
+    "topic": "Cemetery",
+    "styles": [
+      "Happy",
+      "Sad"
+    ],
+    "branch_1_logic": "若说话人处于Happy状态：'strange'实为惊喜与温情的修辞，暗示久别重逢的欣慰；应以共鸣式赞赏回应，如'What a beautiful moment to reconnect with this place! What’s the first thing that feels just like home?'",
+    "branch_2_logic": "若说话人处于Sad状态：'strange'隐含物是人非的怅惘或创伤性回忆触发的不适；需优先验证感受并提供安全空间，如'I hear how layered that feeling is—being back can stir so much. Would you like to share what's coming up for you?'",
+    "reason": "文本表达了一种模糊的怀旧感，'strange' 可承载中性好奇、正面感慨（如感动、欣喜重访）或负面情绪（如疏离、失落、不安），情感极性未明，需依实际情绪状态调整共情策略。"
+  },
+  {
+    "text": "I know, this place holds a lot of memories. It's almost overwhelming.",
+    "category": "emotion",
+    "topic": "Cemetery",
+    "styles": [
+      "Happy",
+      "Sad"
+    ],
+    "branch_1_logic": "若语境表明是Happy（如微笑回忆、主动重返故地、语气轻快），应以温暖共鸣和珍视感回应，强调记忆的美好与联结，例如：‘Those memories sound so special — it’s beautiful how much love and joy this place still holds for you.’",
+    "branch_2_logic": "若语境暗示Sad（如叹息、停顿、伴随疲惫/哽咽等非语言线索），需优先接纳情绪负荷，提供安全空间与温和支持，例如：‘It makes sense that it feels overwhelming — some memories carry deep weight. I’m here to listen, no rush, no judgment.’",
+    "reason": "文本中‘this place holds a lot of memories’和‘almost overwhelming’具有情绪多义性：既可指向温馨怀旧的正面情绪（如感动、幸福），也可指向沉重、悲伤或创伤性的负面情绪（如失落、哀伤、焦虑）；未明确情感极性时，统一回复易造成共情错位。"
+  },
+  {
+    "text": "Do you remember all those picnics we used to have here as kids?",
+    "category": "emotion",
+    "topic": "Cemetery",
+    "styles": [
+      "Happy",
+      "Sad"
+    ],
+    "branch_1_logic": "若识别为Happy：应以轻快、共鸣、共享喜悦的方式回应，如‘Yes! Those sunny afternoons with sandwiches and laughter — pure magic! Do you remember the time we chased fireflies?’，强化积极记忆并延伸温馨互动。",
+    "branch_2_logic": "若识别为Sad：需采用温和共情、接纳性语言，避免轻率乐观，如‘I do… it’s bittersweet, isn’t it? So much has changed — but those moments still feel so real and tender’，承认失落感，给予情感容纳空间。",
+    "reason": "该句为怀旧式提问，语义本身不携带明确情绪倾向；说话人可能带着温暖喜悦（Happy）回忆童年美好时光，也可能隐含失落或感伤（Sad）于时光流逝、物是人非，情感解读高度依赖语境与语音语调，错误归类将导致共情失效。"
+  },
+  {
+    "text": "Yeah, I miss those times. They seemed so carefree.",
+    "category": "emotion",
+    "topic": "Cemetery",
+    "styles": [
+      "Happy",
+      "Sad"
+    ],
+    "branch_1_logic": "若语境暗示积极怀旧（如伴随微笑、轻松语气），应以温暖共鸣和轻快肯定回应，强调美好记忆的延续性，例如：'Those moments really were golden — glad they still bring you joy!'",
+    "branch_2_logic": "若语境暗示消极怀旧（如低沉语调、 preceding loss context），需采用温和共情与轻度安抚策略，承认失落感并锚定当下支持，例如：'It’s okay to miss that lightness — I’m here with you now, and we can create new gentle moments too.'",
+    "reason": "文本表达怀旧情绪，但未明确指向积极（温馨怀念）或消极（失落、悲伤）情感基调；'miss'和'carefree'可承载满足感或怅然感，错误归类易导致共情偏差。"
+  }
+]

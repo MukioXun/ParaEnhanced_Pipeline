@@ -1,0 +1,492 @@
+{
+  "total_directories": 10,
+  "categories": {
+    "age": {
+      "count": 2,
+      "labels": {
+        "adult": 1,
+        "child": 1
+      }
+    },
+    "emotion": {
+      "count": 6,
+      "labels": {
+        "angry": 1,
+        "digust": 1,
+        "fearful": 1,
+        "happy": 1,
+        "sad": 1,
+        "surprised": 1
+      }
+    },
+    "gender": {
+      "count": 2,
+      "labels": {
+        "female": 1,
+        "male": 1
+      }
+    }
+  },
+  "results": [
+    {
+      "category": "age",
+      "label": "adult",
+      "dir_name": "adult_default",
+      "pairs": [
+        {
+          "input": {
+            "file": "adult_default.wav",
+            "model": "user",
+            "annotation": {
+              "ASR": " Can you help me sign up for a bank account online?",
+              "EMO": {
+                "emotion": "neutral",
+                "confidence": 0.995,
+                "distribution": {
+                  "angry": 0.00040503806667402387,
+                  "disgusted": 0.00016665396105963737,
+                  "fearful": 4.2205487261526287e-05,
+                  "happy": 0.0002671083784662187,
+                  "neutral": 0.9950775504112244,
+                  "other": 5.376370609155856e-05,
+                  "sad": 0.0001848477404564619,
+                  "surprised": 1.7360192941850983e-05
+                }
+              },
+              "AGE": {
+                "age_group": "middle_aged",
+                "confidence": 0.8
+              },
+              "GND": {
+                "gender": "male",
+                "confidence": 0.983
+              },
+              "TONE": {
+                "description": "skipped"
+              }
+            }
+          },
+          "output": {
+            "file": "",
+            "model": "",
+            "annotation": {}
+          }
+        }
+      ]
+    },
+    {
+      "category": "age",
+      "label": "child",
+      "dir_name": "child_default",
+      "pairs": [
+        {
+          "input": {
+            "file": "child_default.wav",
+            "model": "user",
+            "annotation": {
+              "ASR": " How do I sign up for a dating website?",
+              "EMO": {
+                "emotion": "neutral",
+                "confidence": 1.0,
+                "distribution": {
+                  "angry": 1.288360067519534e-06,
+                  "disgusted": 2.586627374512318e-07,
+                  "fearful": 3.426541752560297e-07,
+                  "happy": 3.1307013870218725e-08,
+                  "neutral": 0.9999971389770508,
+                  "other": 1.2625290146672796e-08,
+                  "sad": 8.203181209864852e-07,
+                  "surprised": 3.527126679614412e-08
+                }
+              },
+              "AGE": {
+                "age_group": "child",
+                "confidence": 0.8
+              },
+              "GND": {
+                "gender": "female",
+                "confidence": 0.98
+              },
+              "TONE": {
+                "description": "skipped"
+              }
+            }
+          },
+          "output": {
+            "file": "",
+            "model": "",
+            "annotation": {}
+          }
+        }
+      ]
+    },
+    {
+      "category": "emotion",
+      "label": "angry",
+      "dir_name": "emo_angry",
+      "pairs": [
+        {
+          "input": {
+            "file": "emo_angry.wav",
+            "model": "user",
+            "annotation": {
+              "ASR": " I just checked my bank statement and saw the balance.",
+              "EMO": {
+                "emotion": "neutral",
+                "confidence": 1.0,
+                "distribution": {
+                  "angry": 9.363467938783288e-07,
+                  "disgusted": 2.3735333343211096e-06,
+                  "fearful": 3.406496773550316e-07,
+                  "happy": 1.091844114853302e-05,
+                  "neutral": 0.9999418258666992,
+                  "other": 1.4282104530138895e-06,
+                  "sad": 3.708244548761286e-05,
+                  "surprised": 2.7209759778656917e-08
+                }
+              },
+              "AGE": {
+                "age_group": "middle_aged",
+                "confidence": 0.8
+              },
+              "GND": {
+                "gender": "male",
+                "confidence": 0.991
+              },
+              "TONE": {
+                "description": "skipped"
+              }
+            }
+          },
+          "output": {
+            "file": "",
+            "model": "",
+            "annotation": {}
+          }
+        }
+      ]
+    },
+    {
+      "category": "emotion",
+      "label": "digust",
+      "dir_name": "emo_digust",
+      "pairs": [
+        {
+          "input": {
+            "file": "emo_digust.wav",
+            "model": "user",
+            "annotation": {
+              "ASR": " I just checked my bank statement and saw the balance.",
+              "EMO": {
+                "emotion": "neutral",
+                "confidence": 1.0,
+                "distribution": {
+                  "angry": 9.363467938783288e-07,
+                  "disgusted": 2.3735333343211096e-06,
+                  "fearful": 3.406496773550316e-07,
+                  "happy": 1.091844114853302e-05,
+                  "neutral": 0.9999418258666992,
+                  "other": 1.4282104530138895e-06,
+                  "sad": 3.708244548761286e-05,
+                  "surprised": 2.7209759778656917e-08
+                }
+              },
+              "AGE": {
+                "age_group": "middle_aged",
+                "confidence": 0.8
+              },
+              "GND": {
+                "gender": "male",
+                "confidence": 0.991
+              },
+              "TONE": {
+                "description": "skipped"
+              }
+            }
+          },
+          "output": {
+            "file": "",
+            "model": "",
+            "annotation": {}
+          }
+        }
+      ]
+    },
+    {
+      "category": "emotion",
+      "label": "fearful",
+      "dir_name": "emo_fearful",
+      "pairs": [
+        {
+          "input": {
+            "file": "emo_fearful.wav",
+            "model": "user",
+            "annotation": {
+              "ASR": " I received an unexpected package at my door this morning.",
+              "EMO": {
+                "emotion": "unknown",
+                "confidence": 0.995,
+                "distribution": {
+                  "angry": 0.0013894676230847836,
+                  "disgusted": 0.0022838327568024397,
+                  "fearful": 7.549452857347205e-05,
+                  "happy": 0.00015311199240386486,
+                  "neutral": 0.0003971657424699515,
+                  "other": 1.1330903362249956e-05,
+                  "sad": 2.759051858447492e-05,
+                  "surprised": 0.00026427998091094196
+                }
+              },
+              "AGE": {
+                "age_group": "young_adult",
+                "confidence": 0.8
+              },
+              "GND": {
+                "gender": "male",
+                "confidence": 0.997
+              },
+              "TONE": {
+                "description": "skipped"
+              }
+            }
+          },
+          "output": {
+            "file": "",
+            "model": "",
+            "annotation": {}
+          }
+        }
+      ]
+    },
+    {
+      "category": "emotion",
+      "label": "happy",
+      "dir_name": "emo_happy",
+      "pairs": [
+        {
+          "input": {
+            "file": "emo_happy.wav",
+            "model": "user",
+            "annotation": {
+              "ASR": " I received an unexpected package at my door this morning.",
+              "EMO": {
+                "emotion": "unknown",
+                "confidence": 0.995,
+                "distribution": {
+                  "angry": 0.0013894676230847836,
+                  "disgusted": 0.0022838327568024397,
+                  "fearful": 7.549452857347205e-05,
+                  "happy": 0.00015311199240386486,
+                  "neutral": 0.0003971657424699515,
+                  "other": 1.1330903362249956e-05,
+                  "sad": 2.759051858447492e-05,
+                  "surprised": 0.00026427998091094196
+                }
+              },
+              "AGE": {
+                "age_group": "young_adult",
+                "confidence": 0.8
+              },
+              "GND": {
+                "gender": "male",
+                "confidence": 0.997
+              },
+              "TONE": {
+                "description": "skipped"
+              }
+            }
+          },
+          "output": {
+            "file": "",
+            "model": "",
+            "annotation": {}
+          }
+        }
+      ]
+    },
+    {
+      "category": "emotion",
+      "label": "sad",
+      "dir_name": "emo_sad",
+      "pairs": [
+        {
+          "input": {
+            "file": "emo_sad.wav",
+            "model": "user",
+            "annotation": {
+              "ASR": " I just checked my bank statement and saw the balance.",
+              "EMO": {
+                "emotion": "neutral",
+                "confidence": 1.0,
+                "distribution": {
+                  "angry": 9.363467938783288e-07,
+                  "disgusted": 2.3735333343211096e-06,
+                  "fearful": 3.406496773550316e-07,
+                  "happy": 1.091844114853302e-05,
+                  "neutral": 0.9999418258666992,
+                  "other": 1.4282104530138895e-06,
+                  "sad": 3.708244548761286e-05,
+                  "surprised": 2.7209759778656917e-08
+                }
+              },
+              "AGE": {
+                "age_group": "middle_aged",
+                "confidence": 0.8
+              },
+              "GND": {
+                "gender": "male",
+                "confidence": 0.991
+              },
+              "TONE": {
+                "description": "skipped"
+              }
+            }
+          },
+          "output": {
+            "file": "",
+            "model": "",
+            "annotation": {}
+          }
+        }
+      ]
+    },
+    {
+      "category": "emotion",
+      "label": "surprised",
+      "dir_name": "emo_surprised",
+      "pairs": [
+        {
+          "input": {
+            "file": "emo_surprised.wav",
+            "model": "user",
+            "annotation": {
+              "ASR": " I received an unexpected package at my door this morning.",
+              "EMO": {
+                "emotion": "unknown",
+                "confidence": 0.995,
+                "distribution": {
+                  "angry": 0.0013894676230847836,
+                  "disgusted": 0.0022838327568024397,
+                  "fearful": 7.549452857347205e-05,
+                  "happy": 0.00015311199240386486,
+                  "neutral": 0.0003971657424699515,
+                  "other": 1.1330903362249956e-05,
+                  "sad": 2.759051858447492e-05,
+                  "surprised": 0.00026427998091094196
+                }
+              },
+              "AGE": {
+                "age_group": "young_adult",
+                "confidence": 0.8
+              },
+              "GND": {
+                "gender": "male",
+                "confidence": 0.997
+              },
+              "TONE": {
+                "description": "skipped"
+              }
+            }
+          },
+          "output": {
+            "file": "",
+            "model": "",
+            "annotation": {}
+          }
+        }
+      ]
+    },
+    {
+      "category": "gender",
+      "label": "female",
+      "dir_name": "gender_female",
+      "pairs": [
+        {
+          "input": {
+            "file": "gender_female.wav",
+            "model": "user",
+            "annotation": {
+              "ASR": " What screenings are important for cancer prevention for someone like me?",
+              "EMO": {
+                "emotion": "neutral",
+                "confidence": 1.0,
+                "distribution": {
+                  "angry": 6.003044290991966e-06,
+                  "disgusted": 3.8100940855656518e-06,
+                  "fearful": 1.0223812978438218e-06,
+                  "happy": 0.0004418440512381494,
+                  "neutral": 0.9995375871658325,
+                  "other": 3.8040852246012946e-08,
+                  "sad": 4.988235104974592e-06,
+                  "surprised": 4.886876467935508e-06
+                }
+              },
+              "AGE": {
+                "age_group": "young_adult",
+                "confidence": 0.8
+              },
+              "GND": {
+                "gender": "female",
+                "confidence": 0.989
+              },
+              "TONE": {
+                "description": "skipped"
+              }
+            }
+          },
+          "output": {
+            "file": "",
+            "model": "",
+            "annotation": {}
+          }
+        }
+      ]
+    },
+    {
+      "category": "gender",
+      "label": "male",
+      "dir_name": "gender_male",
+      "pairs": [
+        {
+          "input": {
+            "file": "gender_male.wav",
+            "model": "user",
+            "annotation": {
+              "ASR": " What screenings are important for cancer prevention for someone like me?",
+              "EMO": {
+                "emotion": "neutral",
+                "confidence": 1.0,
+                "distribution": {
+                  "angry": 6.003044290991966e-06,
+                  "disgusted": 3.8100940855656518e-06,
+                  "fearful": 1.0223812978438218e-06,
+                  "happy": 0.0004418440512381494,
+                  "neutral": 0.9995375871658325,
+                  "other": 3.8040852246012946e-08,
+                  "sad": 4.988235104974592e-06,
+                  "surprised": 4.886876467935508e-06
+                }
+              },
+              "AGE": {
+                "age_group": "young_adult",
+                "confidence": 0.8
+              },
+              "GND": {
+                "gender": "female",
+                "confidence": 0.989
+              },
+              "TONE": {
+                "description": "skipped"
+              }
+            }
+          },
+          "output": {
+            "file": "",
+            "model": "",
+            "annotation": {}
+          }
+        }
+      ]
+    }
+  ]
+}

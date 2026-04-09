@@ -1,0 +1,46 @@
+{
+  "category": "emotion",
+  "label": "fearful",
+  "dir_name": "emo_fearful",
+  "pairs": [
+    {
+      "input": {
+        "file": "emo_fearful.wav",
+        "model": "user",
+        "annotation": {
+          "ASR": " I received an unexpected package at my door this morning.",
+          "EMO": {
+            "emotion": "unknown",
+            "confidence": 0.995,
+            "distribution": {
+              "angry": 0.0013894676230847836,
+              "disgusted": 0.0022838327568024397,
+              "fearful": 7.549452857347205e-05,
+              "happy": 0.00015311199240386486,
+              "neutral": 0.0003971657424699515,
+              "other": 1.1330903362249956e-05,
+              "sad": 2.759051858447492e-05,
+              "surprised": 0.00026427998091094196
+            }
+          },
+          "AGE": {
+            "age_group": "young_adult",
+            "confidence": 0.8
+          },
+          "GND": {
+            "gender": "male",
+            "confidence": 0.997
+          },
+          "TONE": {
+            "description": "skipped"
+          }
+        }
+      },
+      "output": {
+        "file": "",
+        "model": "",
+        "annotation": {}
+      }
+    }
+  ]
+}

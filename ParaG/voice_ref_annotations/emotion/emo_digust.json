@@ -1,0 +1,46 @@
+{
+  "category": "emotion",
+  "label": "digust",
+  "dir_name": "emo_digust",
+  "pairs": [
+    {
+      "input": {
+        "file": "emo_digust.wav",
+        "model": "user",
+        "annotation": {
+          "ASR": " I just checked my bank statement and saw the balance.",
+          "EMO": {
+            "emotion": "neutral",
+            "confidence": 1.0,
+            "distribution": {
+              "angry": 9.363467938783288e-07,
+              "disgusted": 2.3735333343211096e-06,
+              "fearful": 3.406496773550316e-07,
+              "happy": 1.091844114853302e-05,
+              "neutral": 0.9999418258666992,
+              "other": 1.4282104530138895e-06,
+              "sad": 3.708244548761286e-05,
+              "surprised": 2.7209759778656917e-08
+            }
+          },
+          "AGE": {
+            "age_group": "middle_aged",
+            "confidence": 0.8
+          },
+          "GND": {
+            "gender": "male",
+            "confidence": 0.991
+          },
+          "TONE": {
+            "description": "skipped"
+          }
+        }
+      },
+      "output": {
+        "file": "",
+        "model": "",
+        "annotation": {}
+      }
+    }
+  ]
+}

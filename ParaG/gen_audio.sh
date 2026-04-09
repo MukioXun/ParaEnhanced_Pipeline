@@ -1,0 +1,2 @@
+python audio_gen.py --input /home/u2023112559/qix/Project/Graduation_Project/SFT_DATA/Msg_Gen/ParaW/checkpoints/emotion_results.json \
+                    --output /home/u2023112559/qix/Project/Graduation_Project/SFT_DATA/Msg_Gen/ParaG/AUDIO_SYTH/EMO\

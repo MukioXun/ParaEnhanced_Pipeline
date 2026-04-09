@@ -31,41 +31,41 @@ VOICE_DICTIONARY: Dict[str, VoiceReference] = {
     "Adult": VoiceReference(
         style="Adult",
         audio_path=str(VOICE_REFERENCE_DIR / "adult_default.wav"),
-        description="成熟稳重的成年男声/女声"
+        description="Can you help me sign up for a bank account online?"
     ),
     "Child": VoiceReference(
         style="Child",
         audio_path=str(VOICE_REFERENCE_DIR / "child_default.wav"),
-        description="稚嫩活泼的儿童声音"
+        description="How do I sign up for a dating website?"
     ),
 
     # Gender 相关音色
     "Male": VoiceReference(
         style="Male",
         audio_path=str(VOICE_REFERENCE_DIR / "gender_male.wav"),
-        description="男性声音"
+        description="What screenings are important for cancer prevention for someone like me?"
     ),
     "Female": VoiceReference(
         style="Female",
         audio_path=str(VOICE_REFERENCE_DIR / "gender_female.wav"),
-        description="女性声音"
+        description="What screenings are important for cancer prevention for someone like me?"
     ),
 
     # Emotion 相关音色
     "Happy": VoiceReference(
         style="Happy",
         audio_path=str(VOICE_REFERENCE_DIR / "emo_happy.wav"),
-        description="开心愉悦的情绪"
+        description="I received an unexpected package at my door this morning."
     ),
     "Sad": VoiceReference(
         style="Sad",
         audio_path=str(VOICE_REFERENCE_DIR / "emo_sad.wav"),
-        description="悲伤低沉的情绪"
+        description="I just checked my bank statement and saw the balance."
     ),
     "Excited": VoiceReference(
         style="Excited",
         audio_path=str(VOICE_REFERENCE_DIR / "emo_excited.wav"),
-        description="兴奋激动的情绪"
+        description="I received an unexpected package at my door this morning."
     ),
     "Anxious": VoiceReference(
         style="Anxious",
@@ -75,17 +75,17 @@ VOICE_DICTIONARY: Dict[str, VoiceReference] = {
     "Surprised": VoiceReference(
         style="Surprised",
         audio_path=str(VOICE_REFERENCE_DIR / "emo_surprised.wav"),
-        description="惊讶吃惊的情绪"
+        description="I received an unexpected package at my door this morning."
     ),
     "Disgust": VoiceReference(
         style="Disgust",
         audio_path=str(VOICE_REFERENCE_DIR / "emo_digust.wav"),  # 文件名拼写
-        description="厌恶反感的情绪"
+        description="I just checked my bank statement and saw the balance."
     ),
     "Angry": VoiceReference(
         style="Angry",
         audio_path=str(VOICE_REFERENCE_DIR / "emo_angry.wav"),
-        description="愤怒生气的情绪"
+        description="I just checked my bank statement and saw the balance."
     ),
 }
 

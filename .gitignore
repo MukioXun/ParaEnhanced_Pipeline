@@ -1,5 +1,8 @@
 outD/
 # *.json
 doc_lock/
-ParaG/voice_ref/
+# ParaG/voice_ref/
 ParaG/test_audio_output
+ParaG/AUDIO_SYTH
+ParaG_ver2/
+ParaG_ver3/

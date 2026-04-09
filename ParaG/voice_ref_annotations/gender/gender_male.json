@@ -1,0 +1,46 @@
+{
+  "category": "gender",
+  "label": "male",
+  "dir_name": "gender_male",
+  "pairs": [
+    {
+      "input": {
+        "file": "gender_male.wav",
+        "model": "user",
+        "annotation": {
+          "ASR": " What screenings are important for cancer prevention for someone like me?",
+          "EMO": {
+            "emotion": "neutral",
+            "confidence": 1.0,
+            "distribution": {
+              "angry": 6.003044290991966e-06,
+              "disgusted": 3.8100940855656518e-06,
+              "fearful": 1.0223812978438218e-06,
+              "happy": 0.0004418440512381494,
+              "neutral": 0.9995375871658325,
+              "other": 3.8040852246012946e-08,
+              "sad": 4.988235104974592e-06,
+              "surprised": 4.886876467935508e-06
+            }
+          },
+          "AGE": {
+            "age_group": "young_adult",
+            "confidence": 0.8
+          },
+          "GND": {
+            "gender": "female",
+            "confidence": 0.989
+          },
+          "TONE": {
+            "description": "skipped"
+          }
+        }
+      },
+      "output": {
+        "file": "",
+        "model": "",
+        "annotation": {}
+      }
+    }
+  ]
+}

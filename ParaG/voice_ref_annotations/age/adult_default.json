@@ -1,0 +1,46 @@
+{
+  "category": "age",
+  "label": "adult",
+  "dir_name": "adult_default",
+  "pairs": [
+    {
+      "input": {
+        "file": "adult_default.wav",
+        "model": "user",
+        "annotation": {
+          "ASR": " Can you help me sign up for a bank account online?",
+          "EMO": {
+            "emotion": "neutral",
+            "confidence": 0.995,
+            "distribution": {
+              "angry": 0.00040503806667402387,
+              "disgusted": 0.00016665396105963737,
+              "fearful": 4.2205487261526287e-05,
+              "happy": 0.0002671083784662187,
+              "neutral": 0.9950775504112244,
+              "other": 5.376370609155856e-05,
+              "sad": 0.0001848477404564619,
+              "surprised": 1.7360192941850983e-05
+            }
+          },
+          "AGE": {
+            "age_group": "middle_aged",
+            "confidence": 0.8
+          },
+          "GND": {
+            "gender": "male",
+            "confidence": 0.983
+          },
+          "TONE": {
+            "description": "skipped"
+          }
+        }
+      },
+      "output": {
+        "file": "",
+        "model": "",
+        "annotation": {}
+      }
+    }
+  ]
+}
