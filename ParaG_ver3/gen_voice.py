@@ -58,7 +58,7 @@ text_1 = """亲爱的你，
 
 ref_text_1 = "太阳系八大行星之一。"
 # Use audio from ./assets/audio to avoid downloading from the cloud.
-ref_audio_1 = "https://speech-demo.oss-cn-shanghai.aliyuncs.com/moss_tts_demo/tts_readme_demo/reference_zh.wav"
+ref_audio_1 = "/home/u2023112559/qix/Project/Graduation_Project/SFT_DATA/Msg_Gen/ParaG_ver3/MOSS-TTS/assets/audio/reference_zh.wav"
 
 conversations = [
     # Continuatoin only
